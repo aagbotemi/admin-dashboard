@@ -1,8 +1,11 @@
+import Topbar from "./components/Topbar";
 
 function App() {
   return (
-    <div className="text-center">
-      Hello World      
+    <div>
+      <Topbar />
+      Hello <br />
+      
     </div>
   );
 }
