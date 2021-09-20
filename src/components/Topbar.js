@@ -1,19 +1,54 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Logo from '../assets/images/logo.svg'
 import Avatar from '../assets/images/abiodun.jpg';
 import { IoIosNotificationsOutline } from 'react-icons/io';
 
 
 const Topbar = () => {
+    const ref = useRef();
+    const [showNotification, setShowNotification] = useState(false);
+
+    const onClick = () => setShowNotification(true);
+
+    useEffect(() => {
+        const checkIfClickedOutside = e => {
+        // If the menu is open and the clicked target is not within the menu,
+        // then close the menu
+            if (showNotification && ref.current && !ref.current.contains(e.target)) {
+                setShowNotification(false)
+            }
+        }
+
+        document.addEventListener("mousedown", checkIfClickedOutside)
+
+        return () => {
+        // Cleanup the event listener
+        document.removeEventListener("mousedown", checkIfClickedOutside)
+        }
+    }, [showNotification])
+
     return (
         <div className="topbar h-14 bg-blue-300 flex items-center justify-between sticky top-0 md:px-12 sm:px-8 px-4 py-8">
             <div className="leftTopbar">
                 <img src={Logo} alt="" className="company-logo w-12" />
             </div>
             <div className="rightTopbar flex items-center">
-                <div className="topbarIconContainer flex items-center relative cursor-pointer">
+                <div className="topbarIconContainer flex items-center relative cursor-pointer" ref={ref}>
                     <span className="absolute -top-1 right-0 bg-red-600 text-white text-center text-xs rounded-full w-4 h-4">3</span>
-                    <IoIosNotificationsOutline size="30px" />
+                    <IoIosNotificationsOutline size="30px" onClick={onClick} />
+                    {showNotification 
+                    && (<ul className="bg-red-300 absolute top-7 -left-7 p-3 rounded-md shadow opacity-90">
+                        <li>abiodun</li>
+                        <li>abiodun</li>
+                        <li>abiodun</li>
+                        <li>abiodun</li>
+                    </ul>)}
+                    {/* <ul className="bg-red-500 absolute top-7 -left-6 p-3">
+                        <li>abiodun</li>
+                        <li>abiodun</li>
+                        <li>abiodun</li>
+                        <li>abiodun</li>
+                    </ul> */}
                 </div>
                 <div className="topbarIconContainer">
                     <span>3</span>
@@ -34,3 +69,22 @@ const Topbar = () => {
 }
 
 export default Topbar
+
+
+
+
+/*
+import React, { useState } from "react";
+function App() {
+  const [showText, setShowText] = useState(false);
+  const onClick = () => setShowText(true);
+  return (
+    <div>
+      <button onClick={onClick}>Click me</button>
+      {showText ? <Text /> : null}
+    </div>
+  );
+}
+const Text = () => <div>You clicked the button!</div>;
+export default App;
+ */
