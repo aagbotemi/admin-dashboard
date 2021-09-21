@@ -2,6 +2,11 @@ import React, { useEffect, useRef, useState } from 'react'
 import Logo from '../assets/images/logo.svg'
 import Avatar from '../assets/images/abiodun.jpg';
 import { IoIosNotificationsOutline } from 'react-icons/io';
+import { BsCheckCircle } from 'react-icons/bs';
+import { BiErrorCircle } from 'react-icons/bi';
+import Notification from './Notification';
+
+
 
 
 const Topbar = () => {
@@ -28,27 +33,16 @@ const Topbar = () => {
     }, [showNotification])
 
     return (
-        <div className="topbar h-14 bg-blue-300 flex items-center justify-between sticky top-0 md:px-12 sm:px-8 px-4 py-8">
+        <div className="topbar h-14 bg-blue-300 flex items-center justify-between sticky top-0 md:px-12 sm:px-8 px-4 py-8" ref={ref}>
             <div className="leftTopbar">
                 <img src={Logo} alt="" className="company-logo w-12" />
             </div>
             <div className="rightTopbar flex items-center">
-                <div className="topbarIconContainer flex items-center relative cursor-pointer" ref={ref}>
+                <div className="topbarIconContainer flex items-center relative cursor-pointer">
                     <span className="absolute -top-1 right-0 bg-red-600 text-white text-center text-xs rounded-full w-4 h-4">3</span>
                     <IoIosNotificationsOutline size="30px" onClick={onClick} />
                     {showNotification 
-                    && (<ul className="bg-red-300 absolute top-7 -left-7 p-3 rounded-md shadow opacity-90">
-                        <li>abiodun</li>
-                        <li>abiodun</li>
-                        <li>abiodun</li>
-                        <li>abiodun</li>
-                    </ul>)}
-                    {/* <ul className="bg-red-500 absolute top-7 -left-6 p-3">
-                        <li>abiodun</li>
-                        <li>abiodun</li>
-                        <li>abiodun</li>
-                        <li>abiodun</li>
-                    </ul> */}
+                    && ( <Notification />)}
                 </div>
                 <div className="topbarIconContainer">
                     <span>3</span>
