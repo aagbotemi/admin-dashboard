@@ -39,7 +39,7 @@ const Notification = () => {
                 </div>
             </li>
             <li className="text-center py-2">
-                <button className="font-700">View all notifications</button>
+                <span className="font-semibold  text-blue-400 hover:text-blue-600">View all notifications</span>
             </li>
         </ul>
     )
