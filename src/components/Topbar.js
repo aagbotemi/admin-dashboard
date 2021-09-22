@@ -38,9 +38,9 @@ const Topbar = () => {
                 <img src={Logo} alt="" className="company-logo w-12" />
             </div>
             <div className="rightTopbar flex items-center">
-                <div className="topbarIconContainer flex items-center relative cursor-pointer">
-                    <span className="absolute -top-1 right-0 bg-red-600 text-white text-center text-xs rounded-full w-4 h-4">3</span>
-                    <IoIosNotificationsOutline size="30px" onClick={onClick} />
+                <div className="topbarIconContainer flex items-center relative cursor-pointer bg-purple-100 rounded-full p-1">
+                    <span className="absolute -top-2 right-0 bg-red-600 text-white text-center text-xs rounded-full w-4 h-4">3</span>
+                    <IoIosNotificationsOutline size="21px" onClick={onClick} />
                     {showNotification 
                     && ( <Notification />)}
                 </div>

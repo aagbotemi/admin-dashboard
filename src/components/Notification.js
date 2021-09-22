@@ -4,7 +4,7 @@ import { BsCheckCircle } from 'react-icons/bs'
 
 const Notification = () => {
     return (
-        <ul className="bg-purple-50 absolute top-7 -right-3 px-3 rounded-md shadow-lg max-w-xs w-56">
+        <ul className="bg-purple-50 absolute top-10 -right-3 px-3 rounded-md shadow-lg max-w-xs w-56">
             <li>
                 <div className="flex flex-start border-b py-2">
                     <span className="bg-green-100 p-1 rounded-full h-7 mt-1">
