@@ -20,12 +20,12 @@ const Topbar = () => {
         const checkIfClickedOutside = e => {
         // If the menu is open and the clicked target is not within the menu,
         // then close the menu
-            if (showAvatarDropdown && ref.current && !ref.current.contains(e.target) || showNotification && ref.current && !ref.current.contains(e.target)) {
+            if ((showAvatarDropdown && ref.current && !ref.current.contains(e.target)) && (showNotification && ref.current && !ref.current.contains(e.target))) {
                 setShowNotification(false)
                 setShowAvatarDropdown(false)
             } else {
-                setShowNotification(false)
-                setShowAvatarDropdown(false)
+                // setShowNotification(false)
+                // setShowAvatarDropdown(false)
             }
         }
         document.addEventListener("mousedown", checkIfClickedOutside)
