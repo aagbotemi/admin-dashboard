@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "react-scripts build",
+    "build": "CI= craco build",
     "test": "craco test",
     "eject": "react-scripts eject"
   },
