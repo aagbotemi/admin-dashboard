@@ -1,5 +1,48 @@
 /* TOP BAR CONTAINER */
 
+
+.topbarIconContainer {
+  transition: transform 5s ease-in;
+
+}
+
+.topbarIconContainer ul {
+  top: 48px;
+  right: -8px;
+
+  /* top-12 -right-2 */
+}
+
+/* 
+.fade-enter .btn {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.fade-enter-active .btn {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.fade-exit .btn {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.fade-exit-active .btn {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.fade-enter-active .btn,
+.fade-exit-active .btn {
+  transition: opacity 500ms, transform 500ms;
+} */
+.topbarIconContainer .message {
+  top: 50px;
+  right: -6.8rem;
+}
+.message {
+  height: calc(100vh - 64px);
+}
+
+
 .topbarIconContainer ul:before {
   content: "";
   position: absolute;

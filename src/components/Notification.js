@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const Notification = () => {
     return (
-        <ul className="bg-purple-50 absolute top-12 -right-2 px-3 rounded-md shadow-lg max-w-xs w-56">
+        <ul className="bg-purple-50 absolute px-3 rounded-md shadow-lg max-w-xs w-56">
             <Link to="/">
                 <li>
                     <div className="flex flex-start border-b py-2">

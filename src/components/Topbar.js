@@ -3,29 +3,36 @@ import Logo from '../assets/images/logo.svg'
 import Avatar from '../assets/images/abiodun.jpg';
 import { IoIosNotificationsOutline } from 'react-icons/io';
 import { BsCheckCircle } from 'react-icons/bs';
-import { BiErrorCircle } from 'react-icons/bi';
+import { BiErrorCircle, BiMessageAltDetail } from 'react-icons/bi';
 import Notification from './Notification';
 import AvatarDropdown from './AvatarDropdown';
+import { SwitchTransition, CSSTransition } from "react-transition-group";
+import Message from './Message';
+
 
 const Topbar = () => {
     const ref = useRef();
     const [showNotification, setShowNotification] = useState(false);
     const [showAvatarDropdown, setShowAvatarDropdown] = useState(false);
+    const [showMessage, setShowMessage] = useState(false);
 
     const handleNotification = () => setShowNotification(true);
     const handleAvatarDropdown = () => setShowAvatarDropdown(true);
+    const handleMessage = () => setShowMessage(true);
     
 
     useEffect(() => {
         const checkIfClickedOutside = e => {
         // If the menu is open and the clicked target is not within the menu,
         // then close the menu
-            if ((showAvatarDropdown && ref.current && !ref.current.contains(e.target)) || (showNotification && ref.current && !ref.current.contains(e.target))) {
+            if ((showMessage && ref.current && !ref.current.contains(e.target)) || (showAvatarDropdown && ref.current && !ref.current.contains(e.target)) || (showNotification && ref.current && !ref.current.contains(e.target))) {
                 setShowNotification(false)
                 setShowAvatarDropdown(false)
+                setShowMessage(false)
             } else {
                 // setShowNotification(false)
                 // setShowAvatarDropdown(false)
+                // setShowMessage(false)
             }
         }
         document.addEventListener("mousedown", checkIfClickedOutside)
@@ -34,7 +41,7 @@ const Topbar = () => {
         // Cleanup the event listener
         document.removeEventListener("mousedown", checkIfClickedOutside)
         }
-    }, [showNotification, showAvatarDropdown])
+    }, [showNotification, showAvatarDropdown, showMessage])
 
     return (
         <div className="topbar h-14 bg-blue-300 flex items-center justify-between sticky top-0 md:px-12 sm:px-8 px-4 py-8" ref={ref}>
@@ -45,14 +52,27 @@ const Topbar = () => {
                 <div className="topbarIconContainer flex items-center relative cursor-pointer hover:bg-purple-200 bg-purple-100 rounded-full p-2">
                     <span className="absolute -top-1 right-0 bg-red-600 text-white text-center text-xs rounded-full w-4 h-4">3</span>
                     <IoIosNotificationsOutline size="21px" onClick={handleNotification} />
-                    {showNotification 
-                    && ( <Notification />)}
+                    {/* <SwitchTransition mode='in-out'>
+                        <CSSTransition
+                            key={showNotification}
+                            addEndListener={(node, done) => {
+                            node.addEventListener("transitionend", done, false);
+                            }}
+                            classNames="fade"
+                        >
+                            <button className="btn button-container"> */}
+                                {showNotification 
+                                    && ( <Notification />)}
+                            {/* </button>
+                        </CSSTransition>
+                    </SwitchTransition> */}
+                    
                 </div>
-                <div className="topbarIconContainer">
-                    <span>3</span>
-                </div>
-                <div className="topbarIconContainer">
-                    <span>3</span>
+                
+                <div className="topbarIconContainer flex items-center relative cursor-pointer hover:bg-purple-200 bg-purple-100 rounded-full p-2 mx-3">
+                    <span className="absolute -top-1 right-0 bg-red-600 text-white text-center text-xs rounded-full w-4 h-4">3</span>
+                    <BiMessageAltDetail size="21px" onClick={handleMessage} />
+                        {showMessage && ( <Message />)}
                 </div>
 
                 <div className="topbarIconContainer flex items-center relative cursor-pointer border-l-2">
