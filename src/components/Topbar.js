@@ -2,37 +2,43 @@ import React, { useEffect, useRef, useState } from 'react'
 import Logo from '../assets/images/logo.svg'
 import Avatar from '../assets/images/abiodun.jpg';
 import { IoIosNotificationsOutline } from 'react-icons/io';
-import { BsCheckCircle } from 'react-icons/bs';
-import { BiErrorCircle, BiMessageAltDetail } from 'react-icons/bi';
+import { BiSearch } from 'react-icons/bi';
 import Notification from './Notification';
 import AvatarDropdown from './AvatarDropdown';
-import { SwitchTransition, CSSTransition } from "react-transition-group";
-import Message from './Message';
+import Search from './Search';
 
 
 const Topbar = () => {
     const ref = useRef();
     const [showNotification, setShowNotification] = useState(false);
     const [showAvatarDropdown, setShowAvatarDropdown] = useState(false);
-    const [showMessage, setShowMessage] = useState(false);
+    const [showSearch, setShowSearch] = useState(false);
 
-    const handleNotification = () => setShowNotification(true);
-    const handleAvatarDropdown = () => setShowAvatarDropdown(true);
-    const handleMessage = () => setShowMessage(true);
+    const handleNotification = () => {
+        setShowNotification(true);
+        setShowAvatarDropdown(false);
+        setShowSearch(false);
+    }
+    const handleAvatarDropdown = () => {
+        setShowAvatarDropdown(true);
+        setShowNotification(false);
+        setShowSearch(false);
+    }
+    const handleSearch = () => {
+        setShowSearch(true);
+        setShowAvatarDropdown(false);
+        setShowNotification(false);
+    }
     
 
     useEffect(() => {
         const checkIfClickedOutside = e => {
         // If the menu is open and the clicked target is not within the menu,
         // then close the menu
-            if ((showMessage && ref.current && !ref.current.contains(e.target)) || (showAvatarDropdown && ref.current && !ref.current.contains(e.target)) || (showNotification && ref.current && !ref.current.contains(e.target))) {
+            if ((showSearch && ref.current && !ref.current.contains(e.target)) || (showAvatarDropdown && ref.current && !ref.current.contains(e.target)) || (showNotification && ref.current && !ref.current.contains(e.target))) {
                 setShowNotification(false)
                 setShowAvatarDropdown(false)
-                setShowMessage(false)
-            } else {
-                // setShowNotification(false)
-                // setShowAvatarDropdown(false)
-                // setShowMessage(false)
+                setShowSearch(false)
             }
         }
         document.addEventListener("mousedown", checkIfClickedOutside)
@@ -41,7 +47,7 @@ const Topbar = () => {
         // Cleanup the event listener
         document.removeEventListener("mousedown", checkIfClickedOutside)
         }
-    }, [showNotification, showAvatarDropdown, showMessage])
+    }, [showNotification, showAvatarDropdown, showSearch])
 
     return (
         <div className="topbar h-14 bg-blue-300 flex items-center justify-between sticky top-0 md:px-12 sm:px-8 px-4 py-8" ref={ref}>
@@ -49,34 +55,21 @@ const Topbar = () => {
                 <img src={Logo} alt="" className="company-logo w-12" />
             </div>
             <div className="rightTopbar flex items-center">
-                <div className="topbarIconContainer flex items-center relative cursor-pointer hover:bg-purple-200 bg-purple-100 rounded-full p-2">
-                    <span className="absolute -top-1 right-0 bg-red-600 text-white text-center text-xs rounded-full w-4 h-4">3</span>
-                    <IoIosNotificationsOutline size="21px" onClick={handleNotification} />
-                    {/* <SwitchTransition mode='in-out'>
-                        <CSSTransition
-                            key={showNotification}
-                            addEndListener={(node, done) => {
-                            node.addEventListener("transitionend", done, false);
-                            }}
-                            classNames="fade"
-                        >
-                            <button className="btn button-container"> */}
-                                {showNotification 
-                                    && ( <Notification />)}
-                            {/* </button>
-                        </CSSTransition>
-                    </SwitchTransition> */}
-                    
-                </div>
-                
-                <div className="topbarIconContainer flex items-center relative cursor-pointer hover:bg-purple-200 bg-purple-100 rounded-full p-2 mx-3">
-                    <span className="absolute -top-1 right-0 bg-red-600 text-white text-center text-xs rounded-full w-4 h-4">3</span>
-                    <BiMessageAltDetail size="21px" onClick={handleMessage} />
-                        {showMessage && ( <Message />)}
+
+                <div className="topbarIconContainer flex items-center relative cursor-pointer hidden sm:block hover:bg-purple-200 bg-purple-100 rounded-full p-2">
+                    <BiSearch size="21px" onClick={handleSearch} />
+                        {showSearch&& ( <Search />)}
                 </div>
 
+                <div className="topbarIconContainer flex items-center relative cursor-pointer hover:bg-purple-200 bg-purple-100 rounded-full p-2 mx-2 sm:mx-3 z-10">
+                    <span className="absolute -top-1 right-0 bg-red-600 text-white text-center text-xs rounded-full w-4 h-4">3</span>
+                    <IoIosNotificationsOutline size="21px" onClick={handleNotification} />
+                        {showNotification 
+                            && ( <Notification />)}
+                </div>
+                
                 <div className="topbarIconContainer flex items-center relative cursor-pointer border-l-2">
-                    <img src={Avatar} alt="" className="w-9 h-9 ml-3 rounded-full cursor-pointer" onClick={handleAvatarDropdown} />
+                    <img src={Avatar} alt="" className="w-9 h-9 ml-2 sm:ml-3 rounded-full cursor-pointer" onClick={handleAvatarDropdown} />
                     {showAvatarDropdown 
                     && ( <AvatarDropdown />)}
                 </div>
