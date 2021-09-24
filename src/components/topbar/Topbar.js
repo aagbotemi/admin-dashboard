@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
-import Logo from '../assets/images/logo.svg'
-import Avatar from '../assets/images/abiodun.jpg';
+import Logo from '../../assets/images/logo.svg'
+import Avatar from '../../assets/images/abiodun.jpg';
 import { IoIosNotificationsOutline } from 'react-icons/io';
 import { BiSearch } from 'react-icons/bi';
 import Notification from './Notification';
