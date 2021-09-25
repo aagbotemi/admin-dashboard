@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react'
-import Logo from '../../assets/images/logo.svg'
 import Avatar from '../../assets/images/abiodun.jpg';
 import { IoIosNotificationsOutline } from 'react-icons/io';
 import { BiSearch } from 'react-icons/bi';
@@ -50,15 +49,12 @@ const Topbar = () => {
     }, [showNotification, showAvatarDropdown, showSearch])
 
     return (
-        <div className="topbar h-14 bg-blue-300 flex items-center justify-between sticky top-0 md:px-12 sm:px-8 px-4 py-8" ref={ref}>
-            <div className="leftTopbar">
-                <img src={Logo} alt="" className="company-logo w-12" />
-            </div>
-            <div className="rightTopbar flex items-center">
+        <div className="topbar h-14 flex items-center w-full shadow-lg bg-white sticky top-0 md:px-12 sm:px-8 px-4 py-8" ref={ref}>
+            <div className="rightTopbar flex items-center ml-auto">
 
                 <div className="topbarIconContainer flex items-center relative cursor-pointer hidden sm:block hover:bg-purple-200 bg-purple-100 rounded-full p-2">
                     <BiSearch size="21px" onClick={handleSearch} />
-                        {showSearch&& ( <Search />)}
+                        {showSearch&& ( <Search open={showSearch} close={() => setShowSearch(false)} />)}
                 </div>
 
                 <div className="topbarIconContainer flex items-center relative cursor-pointer hover:bg-purple-200 bg-purple-100 rounded-full p-2 mx-2 sm:mx-3 z-10">
