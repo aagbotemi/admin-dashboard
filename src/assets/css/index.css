@@ -22,7 +22,3 @@ html {
     flex: 1;
   }
 }
-
-.toggle:hover {
-  cursor: pointer
-}

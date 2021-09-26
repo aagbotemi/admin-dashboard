@@ -14,35 +14,6 @@
   right: 65px;
 }
 
-/* .sidebar-mobile .page .sidebar-wrapper, */
-.sidebar-wrap .sidebar-wrapper {
-  position: relative;
-  animation: rotate 3s infinite;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg)
-  }
-  20% {
-    transform: rotate(72deg)
-  }
-  40% {
-    transform: rotate(144deg)
-  }
-  60% {
-    transform: rotate(216deg)
-  }
-  80% {
-    transform: rotate(288deg)
-  }
-  100% {
-    transform: rotate(360deg)
-  }
-}
-
-
-
 
 .page {
   width: 100%;
