@@ -37,6 +37,7 @@ export const SidebarData = [
         path: "/sales",
         icon: <GiSellCard size="25px" />,
     }
+
 ];
 
 export const featuredInfo = [
@@ -81,6 +82,7 @@ export const featuredInfo = [
         iconBgClr: "bg-yellow-100",
         increase: true,
     }
+
 ];
 
 export const userData = [
