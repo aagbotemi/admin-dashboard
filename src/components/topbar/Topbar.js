@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react'
 import Avatar from '../../assets/images/abiodun.jpg';
 import { IoIosNotificationsOutline } from 'react-icons/io';
 import { BiSearch } from 'react-icons/bi';
-
 import Notification from './Notification';
 import AvatarDropdown from './AvatarDropdown';
 import Search from './Search';
