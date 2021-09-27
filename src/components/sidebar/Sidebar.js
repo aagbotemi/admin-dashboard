@@ -30,9 +30,6 @@ const Sidebar = () => {
                         </ul>
                     </div>
                 </div>
-                <div className="flex justify-center items-center my-3 mt-auto">
-                    <img src={Logo} alt="" className="company-logo w-12" />
-                </div>
             </div>
         </div>
     )
