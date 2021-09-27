@@ -5,6 +5,7 @@ import { BiUser } from 'react-icons/bi';
 import { GiSellCard } from 'react-icons/gi';
 import { FiBarChart2 } from 'react-icons/fi';
 import { MdPayment } from 'react-icons/md';
+import Abiodun from './assets/images/abiodun.jpg'
 
 export const SidebarData = [
     {
@@ -134,4 +135,36 @@ export const userData = [
         name: "Dec",
         "Active User": 3000,
     },
+];
+export const topSellingData = [
+    {
+        id: 1,
+        name: "Carter's Shirt",
+        amount: 290,
+        image: Abiodun,
+    },
+    {
+        id: 2,
+        name: "Carter's Shirt",
+        amount: 290,
+        image: Abiodun,
+    },
+    {
+        id: 3,
+        name: "Carter's Shirt",
+        amount: 290,
+        image: Abiodun,
+    },
+    {
+        id: 4,
+        name: "Carter's Shirt",
+        amount: 290,
+        image: Abiodun,
+    },
+    {
+        id: 5,
+        name: "Carter's Shirt",
+        amount: 290,
+        image: Abiodun,
+    }
 ];

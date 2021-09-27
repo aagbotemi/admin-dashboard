@@ -2,6 +2,7 @@ import React from 'react'
 import Chart from '../components/Chart'
 import FeaturedInfo from '../components/FeaturedInfo'
 import { userData } from './../dummyData'
+import TopSellingProduct from '../components/TopSellingProduct'
 
 const Home = () => {
     return (
@@ -9,11 +10,9 @@ const Home = () => {
             <h1 className="mb-4 text-3xl font-semibold border-b-2 border-gray-300">Dashboard</h1>
             <FeaturedInfo />
 
-            <div className="grid md:grid-cols-3 grid-cols-1 gap-4 mt-7">
-                <div className="col-span-2">
-                    <Chart data={userData} title="User Analytics" grid dataKey="Active User" />
-                </div>
-                <div className="">1</div>
+            <div className="grid lg:grid-cols-3 grid-cols-1 gap-y-3 lg:gap-3 mt-5">
+                <Chart data={userData} title="User Analytics" grid dataKey="Active User" />
+                <TopSellingProduct />
             </div>
         </div>
     )
