@@ -13,7 +13,7 @@ const FeaturedInfo = () => {
                             <div>
                                 <h2 className="text-lg uppercase">
                                     {item.name} 
-                                    {item.subName ? <span className="text-sm lowercase">({item.subName})</span> : null }
+                                    {item.subName ? <span className="text-sm lowercase ml-1">({item.subName})</span> : null }
                                 </h2>
                                 <div className="my-1 text-2xl font-medium ">${item.amount}</div>
                                 <div className="flex items-center">
