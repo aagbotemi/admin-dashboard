@@ -12,21 +12,22 @@ const FeaturedInfo = () => {
                     return (
                         <li key={item.id} className="bg-white flex justify-start justify-between p-3 sm:py-4 sm:px-5 rounded-xl shadow-lg cursor-pointer">
                             <div>
-                                <h2 className="text-lg uppercase">
+                                <h2 className="text-sm text-gray-500 uppercase font-medium">
                                     {item.name} 
                                     {item.subName ? <span className="text-sm lowercase ml-1">({item.subName})</span> : null }
                                 </h2>
-                                <div className="my-1 text-2xl font-medium ">
-                                    {item.amount ? <span>&#36;{formatNumber(item.amount)}</span> : formatNumber(item.count)}</div>
+                                <div className="my-1 text-2xl font-semibold ">
+                                    {item.amount ? <span>&#36;{formatNumber(item.amount)}</span> : formatNumber(item.count)}
+                                </div>
                                 <div className="flex items-center">
                                     <span className={`${item.increase ? "bg-green-100" : "bg-red-100"} p-1 rounded-full`}>
                                         {item.increase ? <AiOutlineArrowUp color="green" /> : <AiOutlineArrowDown color="red"/>}
                                     </span>
-                                    <span className="font-semibold mx-2 text-lg">{item.percentage}%</span>
+                                    <span className={`${item.increase ? "text-green-600" : "text-red-600"} font-medium mx-2 text-lg`}>{item.percentage}%</span>
                                     <span className="text-sm">{item.timeline}</span>
                                 </div>
                             </div>
-                            <div className={`text-sm rounded-full my-auto p-1 ${item.iconBgClr}`}>
+                            <div className={`${item.iconBgClr} text-sm rounded-full my-auto p-1`}>
                                 {item.iconLg}
                             </div>
                             
