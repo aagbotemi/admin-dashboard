@@ -74,7 +74,7 @@ export const featuredInfo = [
     {
         id: 4,
         name: "New User",
-        amount: "223",
+        count: "223",
         percentage: 10.5,
         timeline: "Since last month",
         iconLg: <AiOutlineUserAdd size="40px" color="gold" />,
