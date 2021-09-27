@@ -5,13 +5,9 @@
   color: #9BA8C5;
 }
 .sidebar-wrap h1,
-.sidebar-mobile .page ul .trigger svg {
+.sidebar-mobile .page ul .trigger {
   color: #5371E8;
 }
-/* .sidebar-wrap > div {
-  background-color: #0B2559;
-  color: #9BA8C5;
-} */
 
 .topbarIconContainer ul:before {
   content: "";
