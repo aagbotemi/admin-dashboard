@@ -7,10 +7,10 @@ import { formatNumber } from '../utils/formatNumber';
 const FeaturedInfo = () => {
     return (
         <div className="featured">
-            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                 {featuredInfo.map(item => {
                     return (
-                        <li key={item.id} className="bg-white flex justify-start justify-between p-3 sm:py-4 sm:px-5 rounded-xl shadow-xl cursor-pointer">
+                        <li key={item.id} className="bg-white flex justify-start justify-between p-3 sm:py-4 sm:px-5 rounded-xl shadow-lg cursor-pointer">
                             <div>
                                 <h2 className="text-lg uppercase">
                                     {item.name} 
