@@ -1,6 +1,7 @@
 import React from 'react'
 import { AiOutlineArrowUp, AiOutlineArrowDown } from 'react-icons/ai';
 import { featuredInfo } from './../dummyData.js';
+import { formatNumber } from '../utils/formatNumber';
 
 
 const FeaturedInfo = () => {
@@ -15,7 +16,7 @@ const FeaturedInfo = () => {
                                     {item.name} 
                                     {item.subName ? <span className="text-sm lowercase ml-1">({item.subName})</span> : null }
                                 </h2>
-                                <div className="my-1 text-2xl font-medium ">${item.amount}</div>
+                                <div className="my-1 text-2xl font-medium ">&#36;{formatNumber(item.amount)}</div>
                                 <div className="flex items-center">
                                     <span className={`${item.increase ? "bg-green-100" : "bg-red-100"} p-1 rounded-full`}>
                                         {item.increase ? <AiOutlineArrowUp color="green" /> : <AiOutlineArrowDown color="red"/>}

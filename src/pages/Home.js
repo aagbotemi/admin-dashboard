@@ -1,6 +1,4 @@
 import React from 'react'
-import { AiOutlineArrowUp, AiOutlineArrowDown } from 'react-icons/ai';
-import { FiBarChart2 } from 'react-icons/fi';
 import FeaturedInfo from '../components/FeaturedInfo'
 
 
