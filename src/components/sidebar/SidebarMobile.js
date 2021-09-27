@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineMenuUnfold, AiOutlineMenuFold } from 'react-icons/ai';
-import {SidebarData} from './../dummyData.js';
+import {SidebarData} from '../../dummyData.js';
 
 const SidebarMobile = () => {
     const [isOpen, setIsOpen] = useState(false);

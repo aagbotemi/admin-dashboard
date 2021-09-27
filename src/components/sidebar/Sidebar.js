@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../assets/images/logo.svg';
-import {SidebarData} from './../dummyData.js';
+import Logo from '../../assets/images/logo.svg';
+import {SidebarData} from '../../dummyData.js';
 
 const Sidebar = () => {
     return (
