@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Area } from 'recharts';
 
 const Chart = ({title, data, dataKey, grid}) => {
     return (
@@ -15,6 +15,7 @@ const Chart = ({title, data, dataKey, grid}) => {
                         <YAxis />
                         <Tooltip />
                         {grid && <CartesianGrid stroke="#e0dfdf" strokeDasharray="5 5" />}
+                        <Area type="monotone" dataKey="name" stroke="#8884d8" fill="#8884d8" />
                     </LineChart>
                 </ResponsiveContainer>
             </div>
