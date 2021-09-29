@@ -32,14 +32,14 @@ const LatestTransaction = ({title, data}) => {
                             <tbody className="bg-white divide-y divide-gray-300">
                                 {data.map(item => {
                                     return (
-                                        <tr className="w-full">
-                                            <td className="flex items-center font-medium px-6 py-4 whitespace-nowrap">
+                                        <tr>
+                                            <td className="flex items-center font-medium whitespace-nowrap px-4 py-2">
                                                 <img src={item.image} alt={item.name} className="w-10 h-10 mr-2 rounded-full object-center" />
                                                 <span className="whitespace-nowrap truncate">{item.name}</span>
                                             </td>
-                                            <td className="text-sm truncate whitespace-nowrap p-2">{item.date}</td>
-                                            <td className="text-sm truncate whitespace-nowrap p-2">&#36;{formatNumber(item.amount)}</td>
-                                            <td className="p-2 text-sm">
+                                            <td className="text-sm truncate whitespace-nowrap px-4 py-2">{item.date}</td>
+                                            <td className="text-sm truncate whitespace-nowrap px-4 py-2">&#36;{formatNumber(item.amount)}</td>
+                                            <td className=" px-4 py-2text-sm">
                                                 <Button type={item.status}></Button>
                                             </td>
                                         </tr>

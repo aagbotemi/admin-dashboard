@@ -8,7 +8,7 @@ const TopSellingProduct = ({title, data}) => {
             <ul className="divide-y divide-gray-200 pb-4 px-4">
                 {data.map(item => {
                     return (
-                        <li key={item.id} className="flex items-center justify-between py-2">
+                        <li key={item.id} className="flex items-center justify-between py-8">
                             <div className="flex items-center">
                                 <img src={item.image} alt={item.name} className="w-8 h-8 rounded-md" />
                                 <span className="ml-2">{item.name}</span>
