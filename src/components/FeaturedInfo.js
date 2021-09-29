@@ -1,14 +1,13 @@
 import React from 'react'
 import { AiOutlineArrowUp, AiOutlineArrowDown } from 'react-icons/ai';
-import { featuredInfo } from './../dummyData.js';
 import { formatNumber } from '../utils/formatNumber';
 
 
-const FeaturedInfo = () => {
+const FeaturedInfo = ({data}) => {
     return (
         <div className="featured">
             <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-                {featuredInfo.map(item => {
+                {data.map(item => {
                     return (
                         <li key={item.id} className="bg-white flex justify-start justify-between p-3 sm:py-4 sm:px-5 rounded-xl shadow-lg cursor-pointer">
                             <div>

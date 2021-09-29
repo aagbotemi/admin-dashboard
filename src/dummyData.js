@@ -168,3 +168,46 @@ export const topSellingData = [
         image: Abiodun,
     }
 ];
+
+export const latestTransactionData = [
+    {
+        id: 1,
+        name: "Lekan Israel",
+        amount: 7250,
+        image: Abiodun,
+        date: "28 Sep, 2021",
+        status: "Approved"
+    },
+    {
+        id: 2,
+        image: Abiodun,
+        name: "AbdulRhaman Afaraetu",
+        amount: 300,
+        date: "28 Sep, 2021",
+        status: "Pending"
+    },
+    {
+        id: 3,
+        image: Abiodun,
+        name: "Gideon Emeka",
+        amount: 400,
+        date: "28 Sep, 2021",
+        status: "Declined"
+    },
+    {
+        id: 4,
+        amount: 3500,
+        name: "Chisom Amarachi",
+image: Abiodun,
+        date: "28 Sep, 2021",
+        status: "Pending"
+    },
+    {
+        id: 5,
+        image: Abiodun,
+        name: "Susan Carol",
+        amount: 500,
+        date: "28 Sep, 2021",
+        status: "Approved"
+    }
+];

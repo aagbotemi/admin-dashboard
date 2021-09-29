@@ -49,6 +49,7 @@ const Topbar = () => {
     }, [showNotification, showAvatarDropdown, showSearch])
 
     return (
+        // <div className="" ref={ref}>
         <div className="topbar h-14 flex items-center w-full bg-white sticky shadow-lg top-0 md:px-12 sm:px-8 px-4 py-8 z-10" ref={ref}>
             <div className="rightTopbar flex items-center ml-auto">
 

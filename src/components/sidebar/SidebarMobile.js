@@ -9,8 +9,8 @@ const SidebarMobile = () => {
     const handleTrigger = () => setIsOpen(!isOpen);
 
     return (
-        <div className="sidebar-mobile lg:hidden z-20">
-            <div className="page flex flex-col">
+        <div className="sidebar-mobile lg:hidden">
+            <div className="page">
                 <ul className={`sidebar ${isOpen ? "sidebar--open" : ""}`}>
                     <li className="trigger" onClick={handleTrigger}>
                         

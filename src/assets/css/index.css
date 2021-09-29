@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import './topbar.css';
+@import './home.css';
 
 *, :before, :after {
   box-sizing: border-box;
@@ -14,7 +15,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;  
 }
 .display {
   flex: 4;
@@ -22,15 +23,5 @@ body {
 @media (min-width: 1024px) { 
   .sidebar-wrap {
     flex: 1;
-  }
-}
-
-.home {
-  min-height: calc(100vh - 64px)
-}
-
-@media only screen and (max-width: 1024px) {
-  .home {
-    margin-left: 3.6rem;
   }
 }
