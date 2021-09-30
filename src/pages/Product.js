@@ -8,15 +8,12 @@ import {FaRegTrashAlt} from 'react-icons/fa'
 const Product = () => {
   const [data, setData] = useState(productData)
   const [modal, setModal] = useState(false)
-  const [isClicked, setIsClicked] = useState(false)
-
 
   const Button = ({ type }) => {
     return <button className={"rounded-md px-2 py-1 widgetLgButton " + type}>{type}</button>
   }
 
-  const handleModal = (id) => {
-    setIsClicked(data.find(x => x.id === id))
+  const handleModal = () => {
     setModal(true)
   }
   
@@ -28,6 +25,11 @@ const Product = () => {
   return (
     <div className="home bg-gray-100 pt-3 sm:px-5 px-3">
       <h1 className="mb-4 text-3xl font-semibold border-b-2 border-gray-300">Products</h1>
+
+      {/* <Link className="bg-green-400 text-white px-1 rounded-md" to={`/productListing`}>
+          <button>Hello This</button>
+      </Link> */}
+      
           <div className="flex flex-col">
             <div className="mb-3 overflow-x-auto rounded-xl">
                 <div className="py-2 align-middle inline-block min-w-full shadow-xl">
@@ -62,7 +64,8 @@ const Product = () => {
                                   ? <tr>
                                       <td colSpan="6" className="text-center py-4">No product found</td>
                                     </tr> 
-                                  : data.map((item, index ) => {
+                    :
+                    data.map((item, index) => {
                                   return (
                                       <tr>
                                         <td className="font-medium whitespace-nowrap px-4 py-2">{index + 1}</td>
@@ -77,12 +80,11 @@ const Product = () => {
                                         </td>
                                         <td className="text-sm truncate whitespace-nowrap px-4 py-2">
                                           <div className="flex items-center">
-                                            <Link className="bg-green-400 text-white px-1 rounded-md" to={`/products/${item.id}`}>
+                                            <Link className="bg-green-400 text-white px-1 rounded-md" to={`/product/${item.id}`}>
                                               <Button type="Edit"></Button>
                                             </Link>
                                             <FaRegTrashAlt onClick={() => handleModal(item.id)} color="red" size="20px" className="ml-2 cursor-pointer" />
                                             
-                                          
                                             {modal && 
                                             
                                             <div className="modal absolute m-auto shadow-md bg-white rounded-lg">

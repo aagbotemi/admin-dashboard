@@ -4,6 +4,8 @@ import Home from "./pages/Home";
 import Sidebar from "./components/sidebar/Sidebar";
 import SidebarMobile from "./components/sidebar/SidebarMobile";
 import Product from "./pages/Product";
+import ProductDetail from "./pages/ProductDetail";
+import { productData } from "./dummyData";
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/products" component={Product} />
+            <Route path="/product/:id" component={ProductDetail} />
           </Switch>
         </div>
       </div>
