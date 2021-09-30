@@ -28,12 +28,11 @@ const Product = () => {
   return (
     <div className="home bg-gray-100 pt-3 sm:px-5 px-3">
       <h1 className="mb-4 text-3xl font-semibold border-b-2 border-gray-300">Products</h1>
-
           <div className="flex flex-col">
             <div className="mb-3 overflow-x-auto rounded-xl">
                 <div className="py-2 align-middle inline-block min-w-full shadow-xl">
                     <div className="shadow overflow-hidden border-b border-gray-200 rounded-xl">
-                        <table className="min-w-full divide-y divide-gray-200">
+                        <table className="min-w-full divide-y divide-gray-200 relative">
                             <thead className="bg-gray-50">
                                 <tr>
                                     <th scope="col" className="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -83,11 +82,39 @@ const Product = () => {
                                             </Link>
                                             <FaRegTrashAlt onClick={() => handleModal(item.id)} color="red" size="20px" className="ml-2 cursor-pointer" />
                                             
-                                            {modal && <div>
-                                              My Name is Abiodun
+                                          
+                                            {modal && 
+                                            
+                                            <div className="modal absolute m-auto shadow-md bg-white rounded-lg">
+          <div className="py-4 px-6">
+            <div className="text-gray-700 text-lg text-center leading-6">
+              Are you sure you want to delete this item?
+            </div>
+
+
+            <div className="flex justify-between mt-5">
+              <button className="bg-red-500 py-1 px-4 text-white text-sm rounded-md" onClick={() => setModal(false)}>No</button>
+              <button className="bg-green-400 py-1 px-4 text-white text-sm rounded-md" onClick={() => handleDelete(item.id)}>Yes</button>
+            </div>
+
+            
+            
+          </div>
+        </div>}
+                                        
+                                            {/* {!modal && <div className="fixed inset-1/2 -translate-x-1/2 -translate-y-1/2 bg-white">
+                                            <div className="bg-white shadow-md  w-52">
+                                              <div className="">
+                                                <div className="text-gray-700 p-3 break-all">
+                                                  Are you sure you want to delete this item
+                                                </div>
+
+                                              </div>
+                                            </div>
+                                            
 
                                               <button onClick={() => handleDelete(item.id)}>Delete</button>
-                                            </div>}
+                                            </div>} */}
                                             {/* <FaRegTrashAlt onClick={() => handleDelete(item.id) } color="red" size="20px" className="ml-2 cursor-pointer"/> */}
                                           </div>
                                         </td>

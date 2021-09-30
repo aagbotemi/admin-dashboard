@@ -25,3 +25,15 @@ body {
     flex: 1;
   }
 }
+
+.modal {
+  top: 30%;
+  left: 50%;
+  max-width: 20rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .modal {
+    left: 20%;
+  }
+}
