@@ -7,13 +7,22 @@ import {FaRegTrashAlt} from 'react-icons/fa'
 
 const Product = () => {
   const [data, setData] = useState(productData)
+  const [modal, setModal] = useState(false)
+  const [isClicked, setIsClicked] = useState(false)
+
 
   const Button = ({ type }) => {
     return <button className={"rounded-md px-2 py-1 widgetLgButton " + type}>{type}</button>
   }
 
+  const handleModal = (id) => {
+    setIsClicked(data.find(x => x.id === id))
+    setModal(true)
+  }
+  
   const handleDelete = (id) => {
     setData(data.filter((item) => item.id !== id))
+    setModal(false)
   }
 
   return (
@@ -49,8 +58,13 @@ const Product = () => {
                             </thead>
 
                             <tbody className="bg-white divide-y divide-gray-300">
-                                {data.map((item, index )=> {
-                                    return (
+                              
+                                {Array.isArray(data) && data.length === 0 
+                                  ? <tr>
+                                      <td colSpan="6" className="text-center py-4">No product found</td>
+                                    </tr> 
+                                  : data.map((item, index ) => {
+                                  return (
                                       <tr>
                                         <td className="font-medium whitespace-nowrap px-4 py-2">{index + 1}</td>
                                         <td className="flex items-center font-medium whitespace-nowrap px-4 py-2">
@@ -67,11 +81,19 @@ const Product = () => {
                                             <Link className="bg-green-400 text-white px-1 rounded-md" to={`/products/${item.id}`}>
                                               <Button type="Edit"></Button>
                                             </Link>
-                                            <FaRegTrashAlt onClick={() => handleDelete(item.id) } color="red" size="20px" className="ml-2 cursor-pointer"/>
+                                            <FaRegTrashAlt onClick={() => handleModal(item.id)} color="red" size="20px" className="ml-2 cursor-pointer" />
+                                            
+                                            {modal && <div>
+                                              My Name is Abiodun
+
+                                              <button onClick={() => handleDelete(item.id)}>Delete</button>
+                                            </div>}
+                                            {/* <FaRegTrashAlt onClick={() => handleDelete(item.id) } color="red" size="20px" className="ml-2 cursor-pointer"/> */}
                                           </div>
                                         </td>
                                       </tr>
-                                    )
+                                  
+                                  )
                                 })}
                             </tbody> 
                         </table>
