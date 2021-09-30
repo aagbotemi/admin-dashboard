@@ -39,7 +39,7 @@ const LatestTransaction = ({title, data}) => {
                                             </td>
                                             <td className="text-sm truncate whitespace-nowrap px-4 py-2">{item.date}</td>
                                             <td className="text-sm truncate whitespace-nowrap px-4 py-2">&#36;{formatNumber(item.amount)}</td>
-                                            <td className=" px-4 py-2text-sm">
+                                            <td className=" px-4 py-2 text-sm">
                                                 <Button type={item.status}></Button>
                                             </td>
                                         </tr>

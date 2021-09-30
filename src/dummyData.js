@@ -7,6 +7,18 @@ import { FiBarChart2 } from 'react-icons/fi';
 import { MdPayment } from 'react-icons/md';
 import Abiodun from './assets/images/abiodun.jpg'
 
+import airpod from './assets/images/airpod.jpg'
+import casualShoe from './assets/images/casualShoe.jpg'
+import casualWear from './assets/images/casualWear.jpg'
+import flatShoes from './assets/images/flatShoes.jpg'
+import formalShoe from './assets/images/formalShoe.jpg'
+import incerunVintageMen from './assets/images/incerunVintageMen.jpg'
+import menTravelTrekkingShirt from './assets/images/menTravelTrekkingShirt.jpg'
+import shoeHeels from './assets/images/shoeHeels.jpg'
+import springLeather from './assets/images/springLeather.jpg'
+import womenTop from './assets/images/womenTop.jpg'
+import wrinkleFreePinPoint from './assets/images/wrinkleFreePinPoint.jpg'
+
 export const SidebarData = [
     {
         id: 1,
@@ -136,6 +148,7 @@ export const userData = [
         "Active User": 3000,
     },
 ];
+
 export const topSellingData = [
     {
         id: 1,
@@ -181,13 +194,21 @@ export const latestTransactionData = [
     {
         id: 2,
         image: Abiodun,
+        name: "Mariam Opeyemi",
+        amount: 300,
+        date: "28 Sep, 2021",
+        status: "Approved"
+    },
+    {
+        id: 3,
+        image: Abiodun,
         name: "AbdulRhaman Afaraetu",
         amount: 300,
         date: "28 Sep, 2021",
         status: "Pending"
     },
     {
-        id: 3,
+        id: 4,
         image: Abiodun,
         name: "Gideon Emeka",
         amount: 400,
@@ -195,19 +216,110 @@ export const latestTransactionData = [
         status: "Declined"
     },
     {
-        id: 4,
+        id: 5,
         amount: 3500,
         name: "Chisom Amarachi",
-image: Abiodun,
+        image: Abiodun,
         date: "28 Sep, 2021",
         status: "Pending"
     },
     {
-        id: 5,
+        id: 6,
         image: Abiodun,
-        name: "Susan Carol",
+        name: "Andrew Praise",
         amount: 500,
         date: "28 Sep, 2021",
         status: "Approved"
+    }
+];
+
+export const productData = [
+    {
+        id: 1,
+        name: "Apple Airpods",
+        image: airpod,
+        stock: 23,
+        status: "In Stock",
+        amount: 120,
+    },
+    {
+        id: 2,
+        name: "Casual Shoe",
+        image: casualShoe,
+        stock: 13,
+        status: "In Stock",
+        amount: 1200,
+    },
+    {
+        id: 3,
+        name: "Casual Wear",
+        image: casualWear,
+        stock: 32,
+        status: "In Stock",
+        amount: 500,
+    },
+    {
+        id: 4,
+        name: "Flat Shoe",
+        image: flatShoes,
+        stock: 53,
+        status: "In Stock",
+        amount: 1250,
+    },
+    {
+        id: 5,
+        name: "Formal Shoe",
+        image: formalShoe,
+        stock: 0,
+        status: "Out of Stock",
+        amount: "$120.00",
+    },
+    {
+        id: 6,
+        name: "Vintage Men",
+        image: incerunVintageMen,
+        stock: 46,
+        status: "In Stock",
+        amount: 850,
+    },
+    {
+        id: 7,
+        name: "Trekking Shirt",
+        image: menTravelTrekkingShirt,
+        stock: 3,
+        status: "Almost Out of Stock",
+        amount: 420,
+    },
+    {
+        id: 8,
+        name: "Shoe Heels",
+        image: shoeHeels,
+        stock: 39,
+        status: "In Stock",
+        amount: 5000,
+    },
+    {
+        id: 9,
+        name: "Spring Leather",
+        image: springLeather,
+        stock: 27,
+        status: "In Stock",
+        amount: 600,
+    },
+    {
+        id: 10,
+        name: "Women Top",
+        image: womenTop,
+        stock: 0,
+        status: "Out of Stock",
+        amount: 4000,
+    },
+    {
+        id: 11,
+        name: "Wrinkle Free",
+        image: wrinkleFreePinPoint,
+        stock: 20,
+        status: "In Stock",
+        amount: 1500,
     }
 ];
