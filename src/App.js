@@ -3,23 +3,27 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Sidebar from "./components/sidebar/Sidebar";
 import SidebarMobile from "./components/sidebar/SidebarMobile";
-import Product from "./pages/Product";
+import Products from "./pages/Products";
+import Transactions from "./pages/Transactions";
+import Users from "./pages/Users";
 import ProductDetail from "./pages/ProductDetail";
 import { productData } from "./dummyData";
 
 function App() {
   return (
     <Router>
-      <div className="sm:flex">
+      <div className="flex">
         {/* <div className=""> */}
         <SidebarMobile />
         <Sidebar />
-        <div className="display">
+        <div className="w-full">
           <Topbar/>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/products" component={Product} />
+            <Route path="/products" component={Products} />
             <Route path="/product/:id" component={ProductDetail} />
+            <Route path="/transactions" component={Transactions} />
+            <Route path="/users" component={Users} />
           </Switch>
         </div>
       </div>

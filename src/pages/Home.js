@@ -11,8 +11,10 @@ import { featuredInfo } from './../dummyData.js';
 const Home = () => {
     
     return (
+        // <div className="home">
         <div className="home bg-gray-100 pt-3 sm:px-5 px-3">
             <h1 className="mb-4 text-3xl font-semibold border-b-2 border-gray-300">Dashboard</h1>
+
             <FeaturedInfo data={featuredInfo} />
 
             <div className="grid lg:grid-cols-3 grid-cols-1 gap-y-3 lg:gap-3 mt-5">
@@ -21,7 +23,6 @@ const Home = () => {
             </div>
 
             <LatestTransaction data={latestTransactionData} title="Latest Transactions" />
-            
         </div>
     )
 }

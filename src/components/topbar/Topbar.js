@@ -29,7 +29,6 @@ const Topbar = () => {
         setShowNotification(false);
     }
     
-
     useEffect(() => {
         const checkIfClickedOutside = e => {
         // If the menu is open and the clicked target is not within the menu,

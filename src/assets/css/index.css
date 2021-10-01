@@ -18,15 +18,13 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;  
 }
 .display {
-  flex: 4;
+  /* flex: 4; */
 } 
 @media (min-width: 1024px) { 
-  .sidebar-wrap {
-    flex: 1;
-  }
 }
 
-.modal {
+
+/* .modal {
   top: 30%;
   left: 50%;
   max-width: 20rem;
@@ -36,4 +34,4 @@ body {
   .modal {
     left: 20%;
   }
-}
+} */

@@ -24,19 +24,16 @@
   right: 65px;
 }
 
-.page {
-  width: 100%;
-  height: 100%;
+.sidebar-wrap {
+  width: 250px;
+  transition: width 0.3s ease;
+  padding-top: 15px;
 }
 
 .sidebar {
-  position: fixed;
-  top: 0;
   width: 60px;
-  height: 100vh;
   transition: width 0.3s ease;
   padding-top: 15px;
-  z-index: 1000 !important;
 }
 
 .sidebar .link {
@@ -54,8 +51,10 @@
 }
 
 .sidebar--open {
+  /* position: fixed; */
   width: 200px;
   transition: width 0.3s ease;
+  /* z-index: 999999 !important; */
 }
 
 .sidebar--open .link span {
@@ -71,4 +70,4 @@
   align-items: center;
   justify-content: flex-end;
   padding: 0 12px 15px;
-}
+} 

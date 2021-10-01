@@ -7,7 +7,6 @@ const Chart = ({title, data, dataKey, grid}) => {
         <div className="col-span-2">
             <div className="chart bg-white rounded-xl p-5 shadow-lg">
                 <h3 className="mb-5">{title}</h3>
-
                 <ResponsiveContainer width="100%" aspect={5/2}>
                     <LineChart data={data}>
                         <XAxis dataKey="name" stroke="#5550bd" />
