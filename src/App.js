@@ -8,6 +8,7 @@ import Transactions from "./pages/Transactions";
 import Users from "./pages/Users";
 import ProductDetail from "./pages/ProductDetail";
 import UserDetail from "./pages/UserDetail";
+import NewUser from "./pages/NewUser";
 import { productData } from "./dummyData";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path="/transactions" component={Transactions} />
             <Route path="/users" component={Users} />
             <Route path="/user/:id" component={UserDetail} />
+            <Route path="/new-user" component={NewUser} />
           </Switch>
         </div>
       </div>
