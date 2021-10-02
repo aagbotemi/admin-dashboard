@@ -9,14 +9,9 @@ const SidebarMobile = () => {
     const handleTrigger = () => setIsOpen(!isOpen);
 
     return (
-        <div className="sidebar-mobile md:hidden">
-            {/*
-            
-        <div className="sidebar-wrap hidden md:block">
-            <div className="sticky h-screen top-0 flex flex-col">
-            */}
-            <div className="page sticky h-screen top-0">
-                <ul className={`h-screen top-0 sidebar ${isOpen ? "sidebar--open" : ""}`}>
+        <div className="sidebar-mobile lg:hidden">
+            <div className="page">
+                <ul className={`sidebar ${isOpen ? "sidebar--open" : ""}`}>
                     <li className="trigger" onClick={handleTrigger}>
                         
                         {isOpen && <div className="flex justify-center items-center my-3">

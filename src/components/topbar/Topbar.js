@@ -48,7 +48,6 @@ const Topbar = () => {
     }, [showNotification, showAvatarDropdown, showSearch])
 
     return (
-        // <div className="" ref={ref}>
         <div className="topbar h-14 flex items-center w-full bg-white sticky shadow-lg top-0 md:px-12 sm:px-8 px-4 py-8 z-10" ref={ref}>
             <div className="rightTopbar flex items-center ml-auto">
 
@@ -60,14 +59,12 @@ const Topbar = () => {
                 <div className="topbarIconContainer flex items-center relative cursor-pointer hover:bg-purple-200 bg-purple-100 rounded-full p-2 mx-2 sm:mx-3 z-10" onClick={handleNotification}>
                     <span className="absolute -top-1 right-0 bg-red-600 text-white text-center text-xs rounded-full w-4 h-4">3</span>
                     <IoIosNotificationsOutline size="21px" />
-                        {showNotification 
-                            && ( <Notification />)}
+                        {showNotification && <Notification />}
                 </div>
                 
                 <div className="topbarIconContainer flex items-center relative cursor-pointer border-l-2" onClick={handleAvatarDropdown}>
                     <img src={Avatar} alt="" className="w-9 h-9 ml-2 sm:ml-3 rounded-full cursor-pointer" />
-                    {showAvatarDropdown 
-                    && ( <AvatarDropdown />)}
+                    {showAvatarDropdown && <AvatarDropdown />}
                 </div>
             </div>
         </div>

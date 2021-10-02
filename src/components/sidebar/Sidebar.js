@@ -5,7 +5,7 @@ import {SidebarData} from '../../dummyData.js';
 
 const Sidebar = () => {
     return (
-        <div className="sidebar-wrap hidden md:block">
+        <div className="sidebar-wrap hidden lg:block">
             <div className="sticky h-screen top-0 flex flex-col">
                 <div className="flex justify-center items-center my-3">
                     <img src={Logo} alt="" className="company-logo w-7" />

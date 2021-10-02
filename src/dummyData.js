@@ -71,8 +71,8 @@ export const featuredInfo = [
         amount: "2250",
         percentage: 1.4,
         timeline: "Since last month",
-        iconLg: <AiOutlineShoppingCart size="40px" color="pink" />,
-        iconBgClr: "bg-yellow-100",
+        iconLg: <AiOutlineShoppingCart size="40px" color="blue" />,
+        iconBgClr: "bg-blue-100",
         increase: false,
     },
     // {
@@ -194,7 +194,7 @@ export const latestTransactionData = [
     {
         id: 2,
         image: Abiodun,
-        name: "Mariam Opeyemi",
+        name: "AbdulRhaman Afaraetu",
         amount: 300,
         date: "28 Sep, 2021",
         status: "Approved"
@@ -202,7 +202,7 @@ export const latestTransactionData = [
     {
         id: 3,
         image: Abiodun,
-        name: "AbdulRhaman Afaraetu",
+        name: "Chisom Amarachi",
         amount: 300,
         date: "28 Sep, 2021",
         status: "Pending"
@@ -218,7 +218,7 @@ export const latestTransactionData = [
     {
         id: 5,
         amount: 3500,
-        name: "Chisom Amarachi",
+        name: "Mariam Opeyemi",
         image: Abiodun,
         date: "28 Sep, 2021",
         status: "Pending"
@@ -272,7 +272,7 @@ export const productData = [
         image: formalShoe,
         stock: 0,
         status: "Out of Stock",
-        amount: "$120.00",
+        amount: 120,
     },
     {
         id: 6,
