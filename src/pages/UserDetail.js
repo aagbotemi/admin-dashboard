@@ -17,8 +17,8 @@ const UserDetail = () => {
             <div className="mb-4 pb-2 border-b-2 border-gray-300 flex items-center justify-between">
                 <h2 className="text-2xl font-semibold">User Details</h2>
                 <Link to="/new-user">
-                    <button className="bg-blue-600 px-2 py-1 text-white rounded-md text-sm capitalize sm:block hidden">Add new user</button>
-                    <button className="bg-blue-600 px-4 py-1 text-white rounded-md capitalize sm:hidden"> 
+                    <button className="bg-blue-500 px-3 py-1 text-white rounded-md text-sm capitalize sm:block hidden">Add user</button>
+                    <button className="bg-blue-500 px-4 py-1 text-white rounded-md capitalize sm:hidden"> 
                         <AiOutlinePlus size="20px" />
                     </button>
                 </Link>

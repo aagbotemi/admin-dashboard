@@ -5,7 +5,7 @@ import { formatNumber } from '../utils/formatNumber'
 import {FaRegTrashAlt} from 'react-icons/fa'
 import {HiPencilAlt} from 'react-icons/hi'
 import {BiCheck} from 'react-icons/bi'
-import {AiOutlineClose} from 'react-icons/ai'
+import {AiOutlineClose, AiOutlinePlus} from 'react-icons/ai'
 
 const Users = () => {
     const [data, setData] = useState(usersData)
@@ -22,7 +22,18 @@ const Users = () => {
 
     return (
         <div className="users bg-gray-100 pt-3 sm:px-5 px-3">
-            <h1 className="mb-4 text-3xl font-semibold border-b-2 border-gray-300">Users</h1>
+            <div className="mb-4 pb-2 border-b-2 border-gray-300 flex items-center justify-between">
+                <h2 className="text-2xl font-semibold">User Details</h2>
+                <Link to="/new-user">
+                    <button className="bg-blue-500 px-3 py-1 text-white rounded-md text-sm capitalize sm:block hidden">Add user</button>
+                    <button className="bg-blue-500 px-4 py-1 text-white rounded-md capitalize sm:hidden"> 
+                        <AiOutlinePlus size="20px" />
+                    </button>
+                </Link>
+            </div>
+
+
+
             <div className="flex flex-col">
                 <div className="mb-3 overflow-x-auto">
                     <div className="py-2 align-middle inline-block min-w-full">

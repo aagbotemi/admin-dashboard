@@ -56,7 +56,7 @@ const NewUser = () => {
                         <option value="no">No</option>
                     </select>
                 </div>
-                <button className="mt-5 w-96 bg-blue-500 text-white py-2 rounded-lg">Create</button>
+                <button className="mt-5 w-96 bg-blue-600 hover:bg-blue-600 text-white py-2 rounded-lg">Create</button>
             </form>
         </div>
     )
