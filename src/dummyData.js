@@ -439,7 +439,6 @@ export const usersData = [
     }
 ];
 
-
 export const transactionData = [
     {
         id: 1,
@@ -631,3 +630,15 @@ export const transactionData = [
         time: "16:59"
     }
 ];
+
+export const userDetailsData = {
+    id: "53ef42-ab",
+    image: Abiodun,
+    name: "Abiodun Awoyemi",
+    title: "Software Engineer",
+    username: "abiodun99",
+    date: "03-10-2021",
+    phone: "+234 813 518 7981",
+    email: "aabiodunawoyemi@gmail.com",
+    location: "Lagos | Nigeria"
+}
