@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import { AiOutlineCalendar, AiOutlinePlus } from 'react-icons/ai'
-import { BiUser } from 'react-icons/bi'
+import { BiUpload, BiUser } from 'react-icons/bi'
 import { FaPhoneAlt } from 'react-icons/fa'
 import { FiMail } from 'react-icons/fi'
 import { GrLocation } from 'react-icons/gr'
-
 import { userDetailsData } from '../dummyData'
 
 
@@ -22,7 +21,7 @@ const UserDetail = () => {
                 </button>
             </div>
 
-            <div className="grid md:grid-cols-2 grid-cols-1 gap-3 lg:gap-3 mt-5">
+            <div className="grid md:grid-cols-2 grid-cols-1 gap-3 mt-5 pb-8">
                 <div className="bg-white shadow-md rounded-xl p-5 pb-10">
                     <div className="">
                         <div className="flex items-center">
@@ -72,7 +71,44 @@ const UserDetail = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-span-1">Hello</div>
+                <div className="bg-white shadow-md rounded-xl p-5 pb-10 md:mt-0 mt-2">
+                    <div className="text-2xl mb-2">Edit</div>
+                    <form action="">
+                        <div className="flex justify-between flex-col lg:flex-row">
+                            <div className="lg:mr-2">
+                                <div className="mb-2">
+                                    <label className="text-base">Username</label>
+                                    <input type="text" placeholder="abiodun99" className="w-full bg-gray-100 py-2 px-3 rounded-md outline-none" />
+                                </div>
+                                <div className="mb-2">
+                                    <label className="text-base">Full Name</label>
+                                    <input type="text" placeholder="Abiodun Awoyemi" className="w-full bg-gray-100 py-2 px-3 rounded-md outline-none" />
+                                </div>
+                                <div className="mb-2">
+                                    <label className="text-base">Email</label>
+                                    <input type="text" placeholder="user@gmail.com" className="w-full bg-gray-100 py-2 px-3 rounded-md outline-none" />
+                                </div>
+                                <div className="mb-2">
+                                    <label className="text-base">Phone</label>
+                                    <input type="text" placeholder="+1 123 456 67" className="w-full bg-gray-100 py-2 px-3 rounded-md outline-none" />
+                                </div>
+                                <div className="mb-2">
+                                    <label className="text-base">Address</label>
+                                    <input type="text" placeholder="Lagos | Nigeria" className="w-full bg-gray-100 py-2 px-3 rounded-md outline-none" />
+                                </div>
+                            </div>
+                            <div className="lg:ml-2 lg:mt-0 mt-3">
+                                <div className="flex items-center">
+                                    <img src={data.image} alt="" className="w-20 h-20 rounded-md" />
+
+                                    <label htmlFor="file"><BiUpload  className="cursor-pointer"  size="25px" /></label>
+                                    <input type="file" id="file" className="hidden" />
+                                </div>
+                            </div>
+                        </div>
+                        <button className="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-md mt-5 w-full">Update </button>
+                    </form>
+                </div>
             </div>
 
             
