@@ -213,7 +213,7 @@ export const latestTransactionData = [
         name: "Gideon Emeka",
         amount: 400,
         date: "28 Sep, 2021",
-        status: "Declined"
+        status: "Failed"
     },
     {
         id: 5,
@@ -436,5 +436,198 @@ export const usersData = [
         name: "Tammy Doe",
         email: "tester4@gmail.com",
         isAdmin: false
+    }
+];
+
+
+export const transactionData = [
+    {
+        id: 1,
+        name: "Apple Airpods",
+        ref: "23789tk",
+        status: "Approved",
+        amount: 120,
+        date: "03-10-2021",
+        time: "19:45"
+    },
+    {
+        id: 2,
+        name: "Casual Shoe",
+        ref: "32439jg",
+        status: "Approved",
+        amount: 1200,
+        date: "03-10-2021",
+        time: "08:15"
+    },
+    {
+        id: 3,
+        name: "Casual Wear",
+        ref: '67378jr',
+        status: "Approved",
+        amount: 500,
+        date: "03-10-2021",
+        time: "15:12"
+    },
+    {
+        id: 4,
+        name: "Flat Shoe",
+        ref: '72898nb',
+        status: "Approved",
+        amount: 1250,
+        date: "03-10-2021",
+        time: "22:15"
+    },
+    {
+        id: 5,
+        name: "Formal Shoe",
+        ref: "90273nf",
+        status: "Approved",
+        amount: 120,
+        date: "03-10-2021",
+        time: "14:00"
+    },
+    {
+        id: 6,
+        name: "Vintage Men",
+        ref: "98172hs",
+        status: "Pending",
+        amount: 850,
+        date: "03-10-2021",
+        time: "12:54"
+    },
+    {
+        id: 7,
+        name: "Trekking Shirt",
+        ref: "09801aw",
+        status: "Pending",
+        amount: 420,
+        date: "03-10-2021",
+        time: "06:12"
+    },
+    {
+        id: 8,
+        name: "Shoe Heels",
+        ref: "23892jm",
+        status: "Approved",
+        amount: 5000,
+        date: "03-10-2021",
+        time: "08:29"
+    },
+    {
+        id: 9,
+        name: "Spring Leather",
+        ref: "76529rt",
+        status: "Approved",
+        amount: 600,
+        date: "03-10-2021",
+        time: "12:33"
+    },
+    {
+        id: 10,
+        name: "Women Top",
+        ref: "19034iq",
+        status: "Approved",
+        amount: 4000,
+        date: "03-10-2021",
+        time: "09:45"
+    },
+    {
+        id: 11,
+        name: "Wrinkle Free",
+        ref: "72930ug",
+        status: "Failed",
+        amount: 1500,
+        date: "03-10-2021",
+        time: "16:40"
+    },
+    {
+        id: 12,
+        name: "Shoe Heels",
+        ref: "23782jk",
+        status: "Approved",
+        amount: 5000,
+        date: "03-10-2021",
+        time: "08:31"
+    },
+    {
+        id: 13,
+        name: "Spring Leather",
+        ref: "23782bq",
+        status: "Approved",
+        amount: 600,
+        date: "03-10-2021",
+        time: "07:13"
+    },
+    {
+        id: 14,
+        name: "Women Top",
+        ref: "57681dh",
+        status: "Approved",
+        amount: 4000,
+        date: "03-10-2021",
+        time: "09:25"
+    },
+    {
+        id: 15,
+        name: "Spring Leather",
+        ref: "56786gy",
+        status: "Approved",
+        amount: 600,
+        date: "03-10-2021",
+        time: "07:13"
+    },
+    {
+        id: 16,
+        name: "Women Top",
+        ref: "13792jf",
+        status: "Pending",
+        amount: 4000,
+        date: "03-10-2021",
+        time: "08:25"
+    },
+    {
+        id: 17,
+        name: "Spring Leather",
+        ref: "76889ha",
+        status: "Approved",
+        amount: 600,
+        date: "03-10-2021",
+        time: "17:13"
+    },
+    {
+        id: 18,
+        name: "Women Top",
+        ref: "13793hr",
+        status: "Failed",
+        amount: 4000,
+        date: "03-10-2021",
+        time: "19:25"
+    },
+    {
+        id: 19,
+        name: "Wrinkle Shirt",
+        ref: "78912hr",
+        status: "Failed",
+        amount: 1500,
+        date: "03-10-2021",
+        time: "16:40"
+    },
+    {
+        id: 20,
+        name: "Wrinkle Free",
+        ref: "31318jr",
+        status: "Approved",
+        amount: 1500,
+        date: "03-10-2021",
+        time: "13:45"
+    },
+    {
+        id: 21,
+        name: "Wrinkle Free",
+        ref: "67873jw",
+        status: "Failed",
+        amount: 1500,
+        date: "03-10-2021",
+        time: "16:59"
     }
 ];

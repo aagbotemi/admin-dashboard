@@ -23,10 +23,10 @@ const Users = () => {
     return (
         <div className="users bg-gray-100 pt-3 sm:px-5 px-3">
             <h1 className="mb-4 text-3xl font-semibold border-b-2 border-gray-300">Users</h1>
-            <div className="flex flex-col overflow-hidden">
-                <div className="mb-3 overflow-x-auto rounded-xl">
-                    <div className="py-2 align-middle inline-block overflow-hidden min-w-full shadow-xl">
-                    <div className="shadow overflow-hidden border-b border-gray-200 rounded-xl">
+            <div className="flex flex-col">
+                <div className="mb-3 overflow-x-auto">
+                    <div className="py-2 align-middle inline-block min-w-full">
+                    <div className="overflow-hidden border-gray-200 rounded-xl shadow-xl">
                         <table className="w-full divide-y divide-gray-200 relative">
                         <thead className="bg-gray-50">
                             <tr>
@@ -76,7 +76,7 @@ const Users = () => {
                                         <Link to={`/user/${item.id}`}>
                                             <HiPencilAlt color="green" size="20px" className="cursor-pointer" />
                                         </Link>
-                                        <FaRegTrashAlt onClick={() => handleModal(item.id)} color="red" size="20px" className="ml-1 cursor-pointer" />
+                                        <FaRegTrashAlt onClick={() => handleModal(item.id)} color="red" size="20px" className="ml-2 cursor-pointer" />
                                         
                                         {modal && 
                                         <div className="modal absolute m-auto shadow-md bg-white rounded-lg">

@@ -21,10 +21,10 @@ const Products = () => {
   return (
     <div className="products bg-gray-100 pt-3 sm:px-5 px-3">
       <h1 className="mb-4 text-3xl font-semibold border-b-2 border-gray-300">Products</h1>
-        <div className="flex flex-col overflow-hidden">
-          <div className="mb-3 overflow-x-auto rounded-xl">
-            <div className="py-2 align-middle inline-block overflow-hidden min-w-full shadow-xl">
-              <div className="shadow overflow-hidden border-b border-gray-200 rounded-xl">
+        <div className="flex flex-col">
+          <div className="mb-3 overflow-x-auto">
+            <div className="py-2 align-middle inline-block min-w-full">
+              <div className="overflow-hidden border-gray-200 rounded-xl shadow-xl">
                 <table className="w-full divide-y divide-gray-200 relative">
                   <thead className="bg-gray-50">
                     <tr>

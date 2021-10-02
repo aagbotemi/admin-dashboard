@@ -3,7 +3,7 @@ import {formatNumber} from '../utils/formatNumber'
 
 const LatestTransaction = ({title, data}) => {
     const Button = ({ type }) => {
-        return <button className={"rounded-md px-2 py-1 widgetLgButton " + type}>{type}</button>
+        return <span className={"rounded-md text-xs px-2 py-1 widgetLgButton " + type}>{type}</span>
     }
     return (
         <div className="flex flex-col latest">
