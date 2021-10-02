@@ -1,10 +1,8 @@
 import React from 'react'
 import {formatNumber} from '../utils/formatNumber'
+import StatusBadge from '../components/StatusBadge'
 
 const LatestTransaction = ({title, data}) => {
-    const Button = ({ type }) => {
-        return <span className={"rounded-md text-xs px-2 py-1 widgetLgButton " + type}>{type}</span>
-    }
     return (
         <div className="flex flex-col latest">
             <div className="my-3 overflow-x-auto">
@@ -40,7 +38,7 @@ const LatestTransaction = ({title, data}) => {
                                             <td className="text-sm truncate whitespace-nowrap px-3 py-2">{item.date}</td>
                                             <td className="text-sm truncate whitespace-nowrap px-3 py-2">&#36;{formatNumber(item.amount)}</td>
                                             <td className=" px-3 py-2 text-sm">
-                                                <Button type={item.status}></Button>
+                                                <StatusBadge type={item.status}></StatusBadge>
                                             </td>
                                         </tr>
                                     )
