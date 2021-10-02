@@ -642,3 +642,40 @@ export const userDetailsData = {
     email: "aabiodunawoyemi@gmail.com",
     location: "Lagos | Nigeria"
 }
+
+export const productPerformanceData = [
+    {
+        name: "Jan",
+        "Sales": 2400,
+    },
+    {
+        name: "Feb",
+        "Sales": 3000,
+    },
+    {
+        name: "Mar",
+        "Sales": 5000,
+    },
+    {
+        name: "Apr",
+        "Sales": 3000,
+    },
+    {
+        name: "May",
+        "Sales": 1500,
+    },
+    {
+        name: "Jun",
+        "Sales": 6000,
+    }
+];
+
+export const productDetailsData = {
+    id: "53ef42-ab",
+    image: airpod,
+    name: "Apple Airpods",
+    sales: 6123,
+    amount: 6350,
+    active: true,
+    inStock: false,
+}
