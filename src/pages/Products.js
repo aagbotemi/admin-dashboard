@@ -9,10 +9,6 @@ const Products = () => {
   const [data, setData] = useState(productData)
   const [modal, setModal] = useState(false)
 
-  const Button = ({ type }) => {
-    return <button className={"rounded-md px-2 py-1 widgetLgButton " + type}>{type}</button>
-  }
-
   const handleModal = () => {
     setModal(true)
   }

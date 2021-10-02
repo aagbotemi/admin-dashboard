@@ -323,3 +323,118 @@ export const productData = [
         amount: 1500,
     }
 ];
+
+export const usersData = [
+    {
+        id: "53ef42-ab",
+        image: Abiodun,
+        name: "Godstime Michael",
+        email: "admin1@gmail.com",
+        isAdmin: true
+    },
+    {
+        id: "67ga86-ab",
+        image: Abiodun,
+        name: "Kenny Solomon",
+        email: "admin3@gmail.com",
+        isAdmin: true
+    },
+    {
+        id: "38aj85-ab",
+        image: Abiodun,
+        name: "Abigael Joshua",
+        email: "admin2@gmail.com",
+        isAdmin: true
+    },
+    {
+        id: "53eb42-ab",
+        image: Abiodun,
+        name: "Bola Cynthia",
+        email: "user1@gmail.com",
+        isAdmin: false
+    },
+    {
+        id: "78ya56-ab",
+        image: Abiodun,
+        name: "Andrew Impact",
+        email: "user2@gmail.com",
+        isAdmin: false
+    },
+    {
+        id: "24yh67-ab",
+        image: Abiodun,
+        name: "Dayo Bright",
+        email: "user3@gmail.com",
+        isAdmin: false
+    },
+    {
+        id: "67ki89-ab",
+        image: Abiodun,
+        name: "Victor Tayo",
+        email: "user4@gmail.com",
+        isAdmin: false
+    },
+    {
+        id: "43ra00-ab",
+        image: Abiodun,
+        name: "Janet Josiah",
+        email: "user5@gmail.com",
+        isAdmin: false
+    },
+    {
+        id: "65gb78-ab",
+        image: Abiodun,
+        name: "Shams Abayomi",
+        email: "user6@gmail.com",
+        isAdmin: false
+    },
+    {
+        id: "91bv56-ab",
+        image: Abiodun,
+        name: "John Doe",
+        email: "user7@gmail.com",
+        isAdmin: false
+    },
+    {
+        id: "78oj09-ab",
+        image: Abiodun,
+        name: "Sally Sarah",
+        email: "user8@gmail.com",
+        isAdmin: false
+    },
+    {
+        id: "12hg67-ab",
+        image: Abiodun,
+        name: "Kelly Rufus",
+        email: "user9@gmail.com",
+        isAdmin: false
+    },
+    {
+        id: "34th67-ab",
+        image: Abiodun,
+        name: "Jonathan Lucky",
+        email: "tester1@gmail.com",
+        isAdmin: false
+    },
+    {
+        id: "34ks78-ab",
+        image: Abiodun,
+        name: "Esther Oriyomi",
+        email: "tester2@gmail.com",
+        isAdmin: false
+    },
+    {
+        id: "56ed89-ab",
+        image: Abiodun,
+        name: "Emmanuel Yemisi",
+        email: "tester3@gmail.com",
+        isAdmin: false
+    },
+    {
+        id: "38hy89-ab",
+        image: Abiodun,
+        name: "Tammy Doe",
+        email: "tester4@gmail.com",
+        isAdmin: false
+    }
+];

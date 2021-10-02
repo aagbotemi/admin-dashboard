@@ -1,8 +1,11 @@
-/* .home {
-  min-height: calc(100vh - 64px);
-} */
+.home, .products, .users, .transactions,
+.user-detail, .product-detail {
+  min-height: calc(100vh - 64px)
+}
+
 @media only screen and (max-width: 1024px) {
-  .home, .products {
+  .home, .products, .users, .transactions,
+  .user-detail, .product-detail {
     margin-left: 3.6rem;
   }
 }
