@@ -62,7 +62,7 @@ const Transactions = () => {
                                         return (
                                         <tr className="">
                                             <td className="font-medium whitespace-nowrap text-center py-3">{index + 1}</td>
-                                            <td className="flex items-center font-medium whitespace-nowrap truncate px-2 py-3">{item.name}</td>
+                                            <td className="font-medium whitespace-nowrap truncate px-2 py-3">{item.name}</td>
                                             <td className="text-sm truncate whitespace-nowrap px-2 py-3">&#36;{formatNumber(item.amount)}</td>
                                             <td className="text-sm truncate whitespace-nowrap px-2 py-3">{item.ref}</td>
                                             <td className="text-sm truncate whitespace-nowrap px-2 py-3">
