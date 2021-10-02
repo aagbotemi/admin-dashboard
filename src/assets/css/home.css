@@ -1,5 +1,5 @@
 .home, .products, .users, .transactions,
-.user-detail, .product-detail {
+.user-detail, .product-detail, .new-user {
   min-height: calc(100vh - 64px)
 }
 
