@@ -87,7 +87,7 @@ const Users = () => {
                                 </tr> 
                             : data.map((item, index) => {
                                 return (
-                                <tr className="">
+                                <tr key={item.id} className="">
                                     <td className="font-medium whitespace-nowrap text-center py-3">{index + 1}</td>
                                     <td className="font-medium whitespace-nowrap text-center md:px-2 px-1 py-3">{item.id}</td>
                                     <td className="flex items-center font-medium whitespace-nowrap px-2 py-3">

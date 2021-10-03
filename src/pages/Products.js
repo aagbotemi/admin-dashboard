@@ -88,7 +88,7 @@ const Products = () => {
                         </tr> 
                       : data.map((item, index) => {
                         return (
-                          <tr className="">
+                          <tr key={item.id} className="">
                             <td className="font-medium whitespace-nowrap text-center py-3">{index + 1}</td>
                             <td className="flex items-center font-medium whitespace-nowrap px-2 py-3">
                               <img src={item.image} alt={item.name} className="w-8 h-8 mr-2 rounded-full object-center" />

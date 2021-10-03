@@ -11,7 +11,6 @@ const Transactions = () => {
     const [modal, setModal] = useState(false)
     const [search, setSearch] = useState("")
 
-
     const handleModal = () => {
         setModal(true)
     }
@@ -83,7 +82,7 @@ const Transactions = () => {
                                         </tr> 
                                     : data.map((item, index) => {
                                         return (
-                                        <tr className="">
+                                        <tr key={item.id} className="">
                                             <td className="font-medium whitespace-nowrap text-center py-3">{index + 1}</td>
                                             <td className="font-medium whitespace-nowrap truncate px-2 py-3">{item.name}</td>
                                             <td className="text-sm truncate whitespace-nowrap px-2 py-3">&#36;{formatNumber(item.amount)}</td>

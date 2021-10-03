@@ -30,7 +30,7 @@ const LatestTransaction = ({title, data}) => {
                             <tbody className="bg-white divide-y divide-gray-300">
                                 {data.map(item => {
                                     return (
-                                        <tr>
+                                        <tr key={item.id}>
                                             <td className="flex items-center font-medium whitespace-nowrap px-3 py-2">
                                                 <img src={item.image} alt={item.name} className="w-10 h-10 mr-2 rounded-full object-center" />
                                                 <span className="whitespace-nowrap truncate">{item.name}</span>
