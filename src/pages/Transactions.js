@@ -37,13 +37,13 @@ const Transactions = () => {
             <div className="relative mb-1">
                 <input
                     type="text"
-                    className="border-0 pl-9 pr-3 py-2 w-full md:w-1/3 sm:w-1/2 rounded-xl outline-none shadow-md"
-                    icon="search"
+                    className="border-0 pl-10 pr-3 py-2 w-full md:w-1/3 sm:w-1/2 rounded-xl outline-none shadow-md text-lg "
                     onChange={handleChange}
                     placeholder="Search..."
                 />
-                <BiSearch className="absolute top-2 left-2 pr-1 border-r-2" size="23px" color="gray" />
+                <BiSearch className="absolute top-2 left-2 pr-1 border-r-2" size="26px" color="gray" />
             </div>
+            
             <div className="flex flex-col">
                 <div className="mb-3 overflow-x-auto rounded-xl shadow-md">
                     <div className="pt-2 align-middle inline-block min-w-full">
