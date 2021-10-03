@@ -23,7 +23,7 @@ const Transactions = () => {
 
     useEffect(() => {
         setData(transactionData.filter(transaction => {
-            return Object.values(transaction).some(name => String(name).toLowerCase().includes(search))
+            return Object.values(transaction).some(name => String(name).includes(search))
         }))
     }, [search])
 
