@@ -7,7 +7,7 @@ import {BiMessageSquareDetail, BiSearch} from 'react-icons/bi'
 import StatusBadge from '../components/StatusBadge'
 
 const Transactions = () => {
-    const [data, setData] = useState(transactionData)
+    const [data, setData] = useState([])
     const [modal, setModal] = useState(false)
     const [search, setSearch] = useState("")
 
