@@ -1,14 +1,16 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { productData } from '../dummyData'
 import { formatNumber } from '../utils/formatNumber'
 import {FaRegTrashAlt} from 'react-icons/fa'
 import {HiPencilAlt} from 'react-icons/hi'
 import { AiOutlinePlus } from 'react-icons/ai'
+import { BiSearch } from 'react-icons/bi'
 
 const Products = () => {
-  const [data, setData] = useState(productData)
+  const [data, setData] = useState([])
   const [modal, setModal] = useState(false)
+    const [search, setSearch] = useState("")
 
   const handleModal = () => {
     setModal(true)
@@ -19,11 +21,19 @@ const Products = () => {
     setModal(false)
   }
 
+  useEffect(() => {
+        setData(productData.filter(product => {
+            return Object.values(product).some(name => String(name).toLowerCase().includes(search))
+        }))
+    }, [search])
+
+    const handleChange = (e) => {
+        setSearch(e.target.value)
+    }
+
   return (
     <div className="products bg-gray-100 pt-3 sm:px-5 px-3">
-      {/* <h1 className="mb-4 text-3xl font-semibold border-b-2 border-gray-300">Products</h1> */}
-
-        <div className="mb-4 pb-2 border-b-2 border-gray-300 flex items-center justify-between">
+        <div className="mb-3 pb-2 border-b-2 border-gray-300 flex items-center justify-between">
           <h1 className="text-2xl font-semibold">Products</h1>
           <Link to="/new-product">
               <button className="bg-blue-500 px-3 py-1 text-white rounded-md text-sm capitalize sm:block hidden">Add product</button>
@@ -31,12 +41,23 @@ const Products = () => {
                   <AiOutlinePlus size="20px" />
               </button>
           </Link>
-      </div>
+        </div>
+        
+        <div className="relative mb-1">
+          <input
+            type="text"
+            className="border-0 pl-9 pr-3 py-2 w-full md:w-1/3 sm:w-1/2 rounded-xl outline-none shadow-md"
+            icon="search"
+            onChange={handleChange}
+            placeholder="Search..."
+          />
+          <BiSearch className="absolute top-2 left-2 pr-1 border-r-2" size="23px" color="gray" />
+        </div>
 
         <div className="flex flex-col">
-          <div className="mb-3 overflow-x-auto">
-            <div className="py-2 align-middle inline-block min-w-full">
-              <div className="overflow-hidden border-gray-200 rounded-xl shadow-xl">
+          <div className="mt-3 overflow-x-auto rounded-xl shadow-md">
+            <div className="pt-2 align-middle inline-block min-w-full">
+              <div className="overflow-hidden border-gray-200 rounded-xl">
                 <table className="w-full divide-y divide-gray-200 relative">
                   <thead className="bg-gray-50">
                     <tr>
