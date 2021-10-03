@@ -3,13 +3,13 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Sidebar from "./components/sidebar/Sidebar";
 import SidebarMobile from "./components/sidebar/SidebarMobile";
-import Products from "./pages/Products";
+import Products from "./pages/product/Products";
 import Transactions from "./pages/Transactions";
-import Users from "./pages/Users";
-import ProductDetail from "./pages/ProductDetail";
-import UserDetail from "./pages/UserDetail";
-import NewUser from "./pages/NewUser";
-import NewProduct from "./pages/NewProduct";
+import Users from "./pages/user/Users";
+import ProductDetail from "./pages/product/ProductDetail";
+import UserDetail from "./pages/user/UserDetail";
+import NewUser from "./pages/user/NewUser";
+import NewProduct from "./pages/product/NewProduct";
 
 function App() {
   return (

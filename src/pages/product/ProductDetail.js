@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import { AiOutlinePlus } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
-import {productPerformanceData} from '../dummyData'
-import {productDetailsData} from '../dummyData'
-import Chart from "../components/Chart"
-import { formatNumber } from '../utils/formatNumber';
+import { productDetailsData, productPerformanceData } from '../../dummyData'
+import Chart from "../../components/Chart"
+import { formatNumber } from '../../utils/formatNumber';
 import { BiUpload } from 'react-icons/bi'
 
 const ProductDetail = () => {

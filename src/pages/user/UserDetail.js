@@ -4,7 +4,7 @@ import { BiUpload, BiUser } from 'react-icons/bi'
 import { FaPhoneAlt } from 'react-icons/fa'
 import { FiMail } from 'react-icons/fi'
 import { GrLocation } from 'react-icons/gr'
-import { userDetailsData } from '../dummyData'
+import { userDetailsData } from '../../dummyData'
 import { Link } from 'react-router-dom'
 
 

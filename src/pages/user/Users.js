@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { usersData } from '../dummyData'
+import { usersData } from '../../dummyData'
 import { FaRegTrashAlt } from 'react-icons/fa'
 import { HiPencilAlt } from 'react-icons/hi'
 import { BiCheck, BiSearch } from 'react-icons/bi'

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { productData } from '../dummyData'
-import { formatNumber } from '../utils/formatNumber'
-import {FaRegTrashAlt} from 'react-icons/fa'
-import {HiPencilAlt} from 'react-icons/hi'
+import { productData } from '../../dummyData'
+import { formatNumber } from '../../utils/formatNumber'
+import { FaRegTrashAlt } from 'react-icons/fa'
+import { HiPencilAlt } from 'react-icons/hi'
 import { AiOutlinePlus } from 'react-icons/ai'
 import { BiSearch } from 'react-icons/bi'
 
