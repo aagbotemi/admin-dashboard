@@ -32,7 +32,7 @@ const Users = () => {
 
     return (
         <div className="users bg-gray-100 pt-3 sm:px-5 px-3">
-            <div className="mb-4 pb-2 border-b-2 border-gray-300 flex items-center justify-between">
+            <div className="mb-3 pb-1 border-b-2 border-gray-300 flex items-center justify-between">
                 <h1 className="text-xl sm:text-2xl font-medium">Users</h1>
                 <Link to="/new-user">
                     <button className="bg-blue-500 px-3 py-1 text-white rounded-md text-sm capitalize sm:block hidden">Add user</button>
@@ -46,7 +46,6 @@ const Users = () => {
                 <input
                     type="text"
                     className="border-0 pl-9 pr-3 py-2 w-full md:w-1/3 sm:w-1/2 rounded-xl outline-none shadow-md"
-                    icon="search"
                     onChange={handleChange}
                     placeholder="Search..."
                 />

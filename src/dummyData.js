@@ -4,7 +4,7 @@ import { AiOutlineShoppingCart, AiOutlineTransaction, AiOutlineUserAdd } from 'r
 import { BiUser } from 'react-icons/bi';
 import { GiSellCard } from 'react-icons/gi';
 import { FiBarChart2 } from 'react-icons/fi';
-import { MdPayment } from 'react-icons/md';
+// import { MdPayment } from 'react-icons/md';
 import Abiodun from './assets/images/abiodun.jpg'
 
 import airpod from './assets/images/airpod.jpg'

@@ -33,7 +33,7 @@ const Products = () => {
 
   return (
     <div className="products bg-gray-100 pt-3 sm:px-5 px-3">
-        <div className="mb-3 pb-2 border-b-2 border-gray-300 flex items-center justify-between">
+        <div className="mb-3 pb-1 border-b-2 border-gray-300 flex items-center justify-between">
           <h1 className="text-xl sm:text-2xl font-medium">Products</h1>
           <Link to="/new-product">
               <button className="bg-blue-500 px-3 py-1 text-white rounded-md text-sm capitalize sm:block hidden">Add product</button>
@@ -47,7 +47,6 @@ const Products = () => {
           <input
             type="text"
             className="border-0 pl-9 pr-3 py-2 w-full md:w-1/3 sm:w-1/2 rounded-xl outline-none shadow-md"
-            icon="search"
             onChange={handleChange}
             placeholder="Search..."
           />
@@ -55,7 +54,7 @@ const Products = () => {
         </div>
 
         <div className="flex flex-col">
-          <div className="mt-3 overflow-x-auto rounded-xl shadow-md">
+          <div className="mb-3 overflow-x-auto rounded-xl shadow-md">
             <div className="pt-2 align-middle inline-block min-w-full">
               <div className="overflow-hidden border-gray-200 rounded-xl">
                 <table className="w-full divide-y divide-gray-200 relative">

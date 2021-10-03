@@ -33,7 +33,7 @@ const Transactions = () => {
 
     return (
         <div className="transactions bg-gray-100 pt-3 sm:px-5 px-3">
-            <h1 className="mb-3 text-xl sm:text-2xl font-medium border-b-2 border-gray-300">Transactions</h1>
+            <h1 className="mb-3 text-2xl font-medium border-b-2 border-gray-300">Transactions</h1>
 
             <div className="relative mb-1">
                 <input

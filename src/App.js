@@ -10,7 +10,6 @@ import ProductDetail from "./pages/ProductDetail";
 import UserDetail from "./pages/UserDetail";
 import NewUser from "./pages/NewUser";
 import NewProduct from "./pages/NewProduct";
-import { productData } from "./dummyData";
 
 function App() {
   return (
