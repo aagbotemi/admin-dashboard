@@ -34,7 +34,7 @@ const Products = () => {
   return (
     <div className="products bg-gray-100 pt-3 sm:px-5 px-3">
         <div className="mb-3 pb-2 border-b-2 border-gray-300 flex items-center justify-between">
-          <h1 className="text-2xl font-semibold">Products</h1>
+          <h1 className="text-xl sm:text-2xl font-medium">Products</h1>
           <Link to="/new-product">
               <button className="bg-blue-500 px-3 py-1 text-white rounded-md text-sm capitalize sm:block hidden">Add product</button>
               <button className="bg-blue-500 px-4 py-1 text-white rounded-md capitalize sm:hidden"> 

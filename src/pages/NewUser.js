@@ -3,7 +3,7 @@ import React from 'react'
 const NewUser = () => {
     return (
         <div className="new-user bg-gray-100 pt-3 pb-8 sm:px-5 px-3">
-            <h2 className="mb-4 text-3xl font-semibold border-b-2 border-gray-300">New User</h2>
+            <h1 className="mb-4 text-xl sm:text-2xl font-medium border-b-2 border-gray-300">New User</h1>
 
 
             <form action="" className="flex flex-wrap bg-white p-5 pb-10 rounded-xl shadow-lg">
