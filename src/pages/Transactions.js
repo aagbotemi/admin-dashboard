@@ -43,7 +43,7 @@ const Transactions = () => {
                 />
                 <BiSearch className="absolute top-2 left-2 pr-1 border-r-2" size="26px" color="gray" />
             </div>
-            
+
             <div className="flex flex-col">
                 <div className="mb-3 overflow-x-auto rounded-xl shadow-md">
                     <div className="pt-2 align-middle inline-block min-w-full">
@@ -96,7 +96,7 @@ const Transactions = () => {
                                             </td>
                                             <td className="text-xs truncate whitespace-nowrap px-2 py-3">
                                             <div className="flex items-center">
-                                                <Link to={`/product/${item.id}`}>
+                                                <Link to="/transactions">
                                                 <BiMessageSquareDetail color="green" size="20px" className="cursor-pointer" />
                                                 </Link>
                                                 <FaRegTrashAlt onClick={() => handleModal(item.id)} color="red" size="20px" className="ml-2 cursor-pointer" />
