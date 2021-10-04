@@ -9,7 +9,7 @@ const Sidebar = () => {
             <div className="sticky h-screen top-0 flex flex-col">
                 <div className="flex justify-center items-center my-3">
                     <img src={Logo} alt="" className="company-logo w-7" />
-                    <h1 className="text-2xl ml-2">Blueberry</h1>
+                    <h1 className="text-2xl ml-2">aagbotemi</h1>
                 </div>
 
                 <div className="sidebarWrapper mt-1">

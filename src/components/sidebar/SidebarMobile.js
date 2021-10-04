@@ -16,7 +16,7 @@ const SidebarMobile = () => {
                         
                         {isOpen && <div className="flex justify-center items-center my-3">
                             <img src={Logo} alt="" className="company-logo w-7" />
-                            <h1 className="text-2xl ml-1 mr-3">Blueberry</h1>
+                            <h1 className="text-2xl ml-1 mr-3">aagbotemi</h1>
                         </div>}
                         {isOpen ? <AiOutlineMenuFold size="30px" /> : <AiOutlineMenuUnfold size="30px" />}
                     </li>
