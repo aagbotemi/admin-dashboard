@@ -5,12 +5,44 @@ import { FaPhoneAlt } from 'react-icons/fa'
 import { FiMail } from 'react-icons/fi'
 import { GrLocation } from 'react-icons/gr'
 import { userDetailsData } from '../../dummyData'
-import { Link } from 'react-router-dom'
-
+import { Link, useHistory } from 'react-router-dom'
+import FormInput from '../../components/FormInput';
 
 
 const UserDetail = () => {
     const [data, setData] = useState(userDetailsData)
+
+    let history = useHistory();
+    
+    const [form, setForm] = useState({
+        username: '',
+        fullName: '',
+        emailAddress: '',
+        phoneNumber: '',
+        address: '',
+        file: ''
+    });
+
+    const handleFormChange = (event) => {
+        // Get the name of the field that caused this change event
+        // Get the new value of this field
+        const { name, value } = event.target;
+        // Assign new value to the appropriate form field
+        const updatedForm = {
+            ...form,
+            [name]: value
+        };
+        console.log('Form changed: ', updatedForm);
+        // alert('Form changed: ', JSON.parse(updatedForm));
+        // Update state
+        console.log(setForm(updatedForm));
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        alert('Update Successful')
+        history.push('/users')
+    }
 
     return (
         <div className="user-detail bg-gray-100 pt-3 sm:px-5 px-3">
@@ -76,45 +108,83 @@ const UserDetail = () => {
                 </div>
                 <div className="bg-white shadow-md rounded-xl p-5 pb-10 md:mt-0 mt-2">
                     <div className="text-2xl mb-2">Edit</div>
-                    <form action="">
+                    <form onSubmit={handleSubmit}>
                         <div className="flex justify-between flex-col lg:flex-row">
                             <div className="lg:mr-2">
                                 <div className="mb-2">
-                                    <label className="text-base">Username</label>
-                                    <input type="text" placeholder="abiodun99" className="w-full bg-gray-100 py-2 px-3 rounded-md outline-none" />
+                                    <FormInput 
+                                        label="Username" 
+                                        name="username" 
+                                        value={form.username}
+                                        placeholder="abiodun99"
+                                        onChange={handleFormChange}
+                                        className="w-full bg-gray-100 py-2 px-3 rounded-md outline-none"
+                                    />
                                 </div>
                                 <div className="mb-2">
-                                    <label className="text-base">Full Name</label>
-                                    <input type="text" placeholder="Abiodun Awoyemi" className="w-full bg-gray-100 py-2 px-3 rounded-md outline-none" />
+                                    <FormInput 
+                                        label="Full Name"
+                                        name="fullName" 
+                                        value={form.fullName}
+                                        placeholder="Abiodun Awoyemi"
+                                        onChange={handleFormChange}
+                                        className="w-full bg-gray-100 py-2 px-3 rounded-md outline-none"
+                                    />
                                 </div>
                                 <div className="mb-2">
-                                    <label className="text-base">Email</label>
-                                    <input type="text" placeholder="user@gmail.com" className="w-full bg-gray-100 py-2 px-3 rounded-md outline-none" />
+                                    <FormInput 
+                                        label="Email"
+                                        type="email"
+                                        name="emailAddress" 
+                                        value={form.emailAddress}
+                                        placeholder="user@gmail.com"
+                                        onChange={handleFormChange}
+                                        className="w-full bg-gray-100 py-2 px-3 rounded-md outline-none"
+                                    />
                                 </div>
                                 <div className="mb-2">
-                                    <label className="text-base">Phone</label>
-                                    <input type="text" placeholder="+1 123 456 67" className="w-full bg-gray-100 py-2 px-3 rounded-md outline-none" />
+                                    <FormInput 
+                                        label="Phone"
+                                        name="phoneNumber" 
+                                        value={form.phoneNumber}
+                                        placeholder="+1 123 456 67"
+                                        onChange={handleFormChange}
+                                        className="w-full bg-gray-100 py-2 px-3 rounded-md outline-none"
+                                    />
                                 </div>
                                 <div className="mb-2">
-                                    <label className="text-base">Address</label>
-                                    <input type="text" placeholder="Lagos | Nigeria" className="w-full bg-gray-100 py-2 px-3 rounded-md outline-none" />
+                                    <FormInput 
+                                        label="Address"
+                                        name="address" 
+                                        value={form.address}
+                                        placeholder="Lagos | Nigeria"
+                                        onChange={handleFormChange}
+                                        className="w-full bg-gray-100 py-2 px-3 rounded-md outline-none"
+                                    />
                                 </div>
                             </div>
                             <div className="lg:ml-2 lg:mt-0 mt-3">
                                 <div className="flex items-center">
                                     <img src={data.image} alt="" className="w-20 h-20 rounded-md" />
-
-                                    <label htmlFor="file"><BiUpload  className="cursor-pointer"  size="25px" /></label>
+                                    {/* <FormInput 
+                                        label={<BiUpload className="" size="25px" />}
+                                        type="file"
+                                        name="file" 
+                                        value={form.file}
+                                        onChange={handleFormChange}
+                                        className="hidden"
+                                    /> */}
+                                    <label htmlFor="file">
+                                        <BiUpload className="cursor-pointer" size="25px" />
+                                    </label>
                                     <input type="file" id="file" className="hidden" />
                                 </div>
                             </div>
                         </div>
-                        <button className="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-md mt-5 w-full">Update </button>
+                        <button type="submit" className="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-md mt-5 w-full">Update </button>
                     </form>
                 </div>
             </div>
-
-            
         </div>
     )
 }
