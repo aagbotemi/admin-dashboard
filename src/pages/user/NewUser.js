@@ -12,22 +12,19 @@ const NewUser = () => {
         fullName: '',
         emailAddress: '',
         phoneNumber: '',
+        password: '',
         address: '',
+        active: '',
         file: ''
     });
 
     const handleChange = (event) => {
-        // Get the name of the field that caused this change event
-        // Get the new value of this field
         const { name, value } = event.target;
-        // Assign new value to the appropriate form field
         const updatedForm = {
             ...form,
             [name]: value
         };
         console.log('Form changed: ', updatedForm);
-        // alert('Form changed: ', JSON.parse(updatedForm));
-        // Update state
         console.log(setForm(updatedForm));
     };
 
@@ -67,8 +64,8 @@ const NewUser = () => {
                     <BaseInput 
                         type="email" 
                         label="Email" 
-                        name="email" 
-                        value={form.email}
+                        name="emailAddress" 
+                        value={form.emailAddress}
                         placeholder="admin@gmail.com"
                         onChange={handleChange}
                         className="w-full bg-gray-100 py-2 px-3 rounded-md outline-none"
@@ -88,8 +85,8 @@ const NewUser = () => {
                 <div className="w-96 mr-5">
                     <BaseInput 
                         label="Phone" 
-                        name="phone" 
-                        value={form.phone}
+                        name="phoneNumber" 
+                        value={form.phoneNumber}
                         placeholder="+234 813 518 7981"
                         onChange={handleChange}
                         className="w-full bg-gray-100 py-2 px-3 rounded-md outline-none"
