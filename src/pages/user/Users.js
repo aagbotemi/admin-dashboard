@@ -6,6 +6,7 @@ import { HiPencilAlt } from 'react-icons/hi'
 import { BiCheck, BiSearch } from 'react-icons/bi'
 import { AiOutlineClose } from 'react-icons/ai'
 import AddNewItemButton from '../../components/AddNewItemButton'
+import { Helmet } from 'react-helmet';
 
 const Users = () => {
     const [data, setData] = useState([])
@@ -27,6 +28,10 @@ const Users = () => {
 
     return (
         <div className="users bg-gray-100 pt-3 sm:px-5 px-3">
+            <Helmet>
+                <title>Users | Admin Dashboard</title>
+                <meta name="description" content="Users Listing page of Admin Dashboard" />
+            </Helmet>
             <div className="mb-3 pb-1 border-b-2 border-gray-300 flex items-center justify-between">
                 <h1 className="text-xl sm:text-2xl font-medium">Users</h1>
                 <Link to="/new-user">
