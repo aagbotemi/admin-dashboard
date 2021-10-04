@@ -18,6 +18,11 @@ import shoeHeels from './assets/images/shoeHeels.jpg'
 import springLeather from './assets/images/springLeather.jpg'
 import womenTop from './assets/images/womenTop.jpg'
 import wrinkleFreePinPoint from './assets/images/wrinkleFreePinPoint.jpg'
+import NikeAirMax from './assets/images/nike-air-max.jpg'
+import Adidas from './assets/images/adidas.jpg'
+import Pant from './assets/images/pant-trouser.jpg'
+import Carter from './assets/images/carters-shirt.jpg'
+import StripePatch from './assets/images/stripe-patch.jpg'
 
 export const SidebarData = [
     {
@@ -153,32 +158,32 @@ export const topSellingData = [
     {
         id: 1,
         name: "Carter's Shirt",
-        amount: 290,
-        image: Abiodun,
+        amount: 900,
+        image: Carter,
     },
     {
         id: 2,
-        name: "Carter's Shirt",
-        amount: 290,
-        image: Abiodun,
+        name: "Men's Formal Pants",
+        amount: 650,
+        image: Pant,
     },
     {
         id: 3,
-        name: "Carter's Shirt",
-        amount: 290,
-        image: Abiodun,
+        name: "Nike | Air Max",
+        amount: 2900,
+        image: NikeAirMax,
     },
     {
         id: 4,
-        name: "Carter's Shirt",
-        amount: 290,
-        image: Abiodun,
+        name: "Adidas | Grand Court",
+        amount: 1500,
+        image: Adidas,
     },
     {
         id: 5,
-        name: "Carter's Shirt",
-        amount: 290,
-        image: Abiodun,
+        name: "Stripe Patch Shirt",
+        amount: 1000,
+        image: StripePatch,
     }
 ];
 
