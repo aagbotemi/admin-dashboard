@@ -5,6 +5,8 @@ import { FaRegTrashAlt } from 'react-icons/fa'
 import { HiPencilAlt } from 'react-icons/hi'
 import { BiCheck, BiSearch } from 'react-icons/bi'
 import { AiOutlineClose, AiOutlinePlus } from 'react-icons/ai'
+import BaseButton from '../../components/BaseButton'
+import AddNewItemButton from '../../components/AddNewItemButton'
 
 const Users = () => {
     const [data, setData] = useState([])
@@ -35,10 +37,7 @@ const Users = () => {
             <div className="mb-3 pb-1 border-b-2 border-gray-300 flex items-center justify-between">
                 <h1 className="text-xl sm:text-2xl font-medium">Users</h1>
                 <Link to="/new-user">
-                    <button className="bg-blue-500 px-3 py-1 text-white rounded-md text-sm capitalize sm:block hidden">Add user</button>
-                    <button className="bg-blue-500 px-4 py-1 text-white rounded-md capitalize sm:hidden"> 
-                        <AiOutlinePlus size="20px" />
-                    </button>
+                    <AddNewItemButton />
                 </Link>
             </div>
 

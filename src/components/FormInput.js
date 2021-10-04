@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React from 'react';
 
 const FormInput = (props) => {
     const {
@@ -10,11 +10,6 @@ const FormInput = (props) => {
         onChange,
         className
     } = props;
-    
-    // const [value, setValue] = useState('');
-    // const onChange = (event) => {
-    //     setValue(event.target.value);
-    // };
 
     return (
         <div className="mb-3">

@@ -5,6 +5,8 @@ import { productDetailsData, productPerformanceData } from '../../dummyData'
 import Chart from "../../components/Chart"
 import { formatNumber } from '../../utils/formatNumber';
 import { BiUpload } from 'react-icons/bi'
+import BaseButton from '../../components/BaseButton'
+import AddNewItemButton from '../../components/AddNewItemButton'
 
 const ProductDetail = () => {
     const [data, setData] = useState(productDetailsData)
@@ -14,10 +16,7 @@ const ProductDetail = () => {
             <div className="mb-3 pb-1 border-b-2 border-gray-300 flex items-center justify-between">
                 <h1 className="text-xl sm:text-2xl font-medium">Product Details</h1>
                 <Link to="/new-product">
-                    <button className="bg-blue-500 px-3 py-1 text-white rounded-md text-sm capitalize sm:block hidden">Add product</button>
-                    <button className="bg-blue-500 px-4 py-1 text-white rounded-md capitalize sm:hidden"> 
-                        <AiOutlinePlus size="20px" />
-                    </button>
+                    <AddNewItemButton />
                 </Link>
             </div>
             <div className="grid md:grid-cols-3 grid-cols-1 md:gap-3 gap-y-3 mt-5 pb-4">
