@@ -22,7 +22,7 @@ const SidebarMobile = () => {
                     </li>
                     {SidebarData.map(item => {
                         return (
-                            <li key={item.id} className="">
+                            <li key={item.id} className="" onClick={() => setIsOpen(false)}>
                                 <Link to={item.path} className="link ml-2 hover:bg-gray-100 hover:border-indigo-700 text-gray-200 hover:text-gray-700 border-transparent border-l-4 py-1 mb-1">
                                     <div className="sidebarListItem flex items-center p-1">
                                         {item.icon}
