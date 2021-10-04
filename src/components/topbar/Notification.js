@@ -3,11 +3,11 @@ import { BiErrorCircle } from 'react-icons/bi'
 import { BsCheckCircle } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 
-const Notification = () => {
+const Notification = ({close}) => {
     return (
         <ul className="notification bg-purple-50 absolute px-3 rounded-md shadow-lg max-w-xs w-56 top-12 -right-14">
-            <Link to="/">
-                <li>
+            {/* <Link to="/" onClick={close}> */}
+                <li onClick={close}>
                     <div className="flex flex-start border-b py-2">
                         <span className="bg-green-100 p-1 rounded-full h-7 mt-1">
                             <BsCheckCircle  size="20px" color="green" />
@@ -18,10 +18,10 @@ const Notification = () => {
                         </span>
                     </div>
                 </li>
-            </Link>
+            {/* </Link> */}
             
-            <Link to="/">
-                <li>
+            {/* <Link to="/" onClick={close}> */}
+                <li onClick={close}>
                     <div className="flex flex-start border-b py-2">
                         <span className="bg-red-100 p-1 rounded-full h-7 mt-1">
                             <BiErrorCircle  size="20px" color="red" />
@@ -32,10 +32,10 @@ const Notification = () => {
                         </span>
                     </div>
                 </li>
-            </Link>
+            {/* </Link> */}
             
-            <Link to="/">
-                <li>
+            {/* <Link to="/" onClick={close}> */}
+                <li onClick={close}>
                     <div className="flex flex-start border-b py-2">
                         <span className="bg-green-100 p-1 rounded-full h-7 mt-1">
                             <BsCheckCircle  size="20px" color="green" />
@@ -46,13 +46,13 @@ const Notification = () => {
                         </span>
                     </div>
                 </li>
-            </Link>
+            {/* </Link> */}
             
-            <Link to="/">
-                <li className="text-center py-2">
+            {/* <Link to="/" onClick={close}> */}
+                <li onClick={close} className="text-center py-2">
                     <span className="font-semibold  text-blue-400 hover:text-blue-600">View all notifications</span>
                 </li>
-            </Link>
+            {/* </Link> */}
         </ul>
     )
 }
