@@ -4,8 +4,7 @@ import { usersData } from '../../dummyData'
 import { FaRegTrashAlt } from 'react-icons/fa'
 import { HiPencilAlt } from 'react-icons/hi'
 import { BiCheck, BiSearch } from 'react-icons/bi'
-import { AiOutlineClose, AiOutlinePlus } from 'react-icons/ai'
-import BaseButton from '../../components/BaseButton'
+import { AiOutlineClose } from 'react-icons/ai'
 import AddNewItemButton from '../../components/AddNewItemButton'
 
 const Users = () => {

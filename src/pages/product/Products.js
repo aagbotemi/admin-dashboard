@@ -4,15 +4,13 @@ import { productData } from '../../dummyData'
 import { formatNumber } from '../../utils/formatNumber'
 import { FaRegTrashAlt } from 'react-icons/fa'
 import { HiPencilAlt } from 'react-icons/hi'
-import { AiOutlinePlus } from 'react-icons/ai'
 import { BiSearch } from 'react-icons/bi'
-import BaseButton from '../../components/BaseButton'
 import AddNewItemButton from '../../components/AddNewItemButton'
 
 const Products = () => {
   const [data, setData] = useState([])
   const [modal, setModal] = useState(false)
-    const [search, setSearch] = useState("")
+  const [search, setSearch] = useState("")
 
   const handleModal = () => {
     setModal(true)
@@ -24,14 +22,14 @@ const Products = () => {
   }
 
   useEffect(() => {
-        setData(productData.filter(product => {
-            return Object.values(product).some(name => String(name).includes(search))
-        }))
-    }, [search])
+    setData(productData.filter(product => {
+      return Object.values(product).some(name => String(name).includes(search))
+    }))
+  }, [search])
 
-    const handleChange = (e) => {
-        setSearch(e.target.value)
-    }
+  const handleChange = (e) => {
+    setSearch(e.target.value)
+  }
 
   return (
     <div className="products bg-gray-100 pt-3 sm:px-5 px-3">

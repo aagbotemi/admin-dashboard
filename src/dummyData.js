@@ -218,7 +218,7 @@ export const latestTransactionData = [
     {
         id: 5,
         amount: 3500,
-        name: "Mariam Opeyemi",
+        name: "Mariam Rukayat",
         image: Abiodun,
         date: "28 Sep, 2021",
         status: "Pending"

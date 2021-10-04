@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AiOutlineCalendar, AiOutlinePlus } from 'react-icons/ai'
+import { AiOutlineCalendar } from 'react-icons/ai'
 import { BiUpload, BiUser } from 'react-icons/bi'
 import { FaPhoneAlt } from 'react-icons/fa'
 import { FiMail } from 'react-icons/fi'

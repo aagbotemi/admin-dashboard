@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { AiOutlinePlus } from 'react-icons/ai'
 import { Link, useHistory } from 'react-router-dom'
 import { productDetailsData, productPerformanceData } from '../../dummyData'
 import Chart from "../../components/Chart"
