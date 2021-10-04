@@ -6,6 +6,7 @@ import { FaRegTrashAlt } from 'react-icons/fa'
 import { HiPencilAlt } from 'react-icons/hi'
 import { BiSearch } from 'react-icons/bi'
 import AddNewItemButton from '../../components/AddNewItemButton'
+import { Helmet } from 'react-helmet';
 
 const Products = () => {
   const [data, setData] = useState([])
@@ -27,6 +28,10 @@ const Products = () => {
 
   return (
     <div className="products bg-gray-100 pt-3 sm:px-5 px-3">
+        <Helmet>
+          <title>Products | Admin Dashboard</title>
+          <meta name="description" content="Products Listing page of Admin Dashboard" />
+        </Helmet>
         <div className="mb-3 pb-1 border-b-2 border-gray-300 flex items-center justify-between">
           <h1 className="text-xl sm:text-2xl font-medium">Products</h1>
           <Link to="/new-product">
