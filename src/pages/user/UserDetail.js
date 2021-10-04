@@ -7,6 +7,7 @@ import { GrLocation } from 'react-icons/gr'
 import { userDetailsData } from '../../dummyData'
 import { Link, useHistory } from 'react-router-dom'
 import FormInput from '../../components/FormInput';
+import BaseButton from '../../components/BaseButton'
 
 
 const UserDetail = () => {
@@ -181,7 +182,11 @@ const UserDetail = () => {
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" className="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-md mt-5 w-full">Update </button>
+                        <BaseButton
+                            type="submit"
+                            name="Update"
+                            className="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-md mt-5 w-full"
+                        />
                     </form>
                 </div>
             </div>
