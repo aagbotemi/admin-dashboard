@@ -8,16 +8,10 @@ import StatusBadge from '../components/StatusBadge'
 
 const Transactions = () => {
     const [data, setData] = useState([])
-    const [modal, setModal] = useState(false)
     const [search, setSearch] = useState("")
 
-    const handleModal = () => {
-        setModal(true)
-    }
-    
     const handleDelete = (id) => {
         setData(data.filter((item) => item.id !== id))
-        setModal(false)
     }
 
     useEffect(() => {
@@ -99,20 +93,7 @@ const Transactions = () => {
                                                 <Link to="/transactions">
                                                 <BiMessageSquareDetail color="green" size="20px" className="cursor-pointer" />
                                                 </Link>
-                                                <FaRegTrashAlt onClick={() => handleModal(item.id)} color="red" size="20px" className="ml-2 cursor-pointer" />
-                                                
-                                                {modal && 
-                                                <div className="modal absolute m-auto shadow-md bg-white rounded-lg">
-                                                <div className="py-4 px-6">
-                                                    <div className="text-gray-700 text-lg text-center leading-6">
-                                                    Are you sure you want to delete this item?
-                                                    </div>
-                                                    <div className="flex justify-between mt-5">
-                                                    <button className="bg-red-500 py-1 px-4 text-white text-sm rounded-md" onClick={() => setModal(false)}>No</button>
-                                                    <button className="bg-green-400 py-1 px-4 text-white text-sm rounded-md" onClick={() => handleDelete(item.id)}>Yes</button>
-                                                    </div>
-                                                </div>
-                                                </div>}
+                                                <FaRegTrashAlt onClick={() => handleDelete(item.id)} color="red" size="20px" className="ml-2 cursor-pointer" />
                                             </div>
                                             </td> 
                                         </tr>
