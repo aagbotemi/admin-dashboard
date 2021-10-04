@@ -5,6 +5,7 @@ import { formatNumber } from '../utils/formatNumber'
 import {FaRegTrashAlt} from 'react-icons/fa'
 import {BiMessageSquareDetail, BiSearch} from 'react-icons/bi'
 import StatusBadge from '../components/StatusBadge'
+import { Helmet } from 'react-helmet';
 
 const Transactions = () => {
     const [data, setData] = useState([])
@@ -26,8 +27,11 @@ const Transactions = () => {
 
     return (
         <div className="transactions bg-gray-100 pt-3 sm:px-5 px-3">
+            <Helmet>
+                <title>Transactions | Admin Dashboard</title>
+                <meta name="description" content="Transaction Listing page of Admin Dashboard" />
+            </Helmet>
             <h1 className="mb-3 text-2xl font-medium border-b-2 border-gray-300">Transactions</h1>
-
             <div className="relative mb-1">
                 <input
                     type="text"
