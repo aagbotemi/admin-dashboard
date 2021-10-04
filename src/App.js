@@ -11,10 +11,12 @@ import UserDetail from "./pages/user/UserDetail";
 import NewUser from "./pages/user/NewUser";
 import NewProduct from "./pages/product/NewProduct";
 import NotFound from './pages/404';
+import SEO from './components/SEO'
 
 function App() {
   return (
     <Router>
+      <SEO title="Home" />
       <div className="sm:flex">
         <SidebarMobile />
         <Sidebar />
