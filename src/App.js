@@ -10,6 +10,7 @@ import ProductDetail from "./pages/product/ProductDetail";
 import UserDetail from "./pages/user/UserDetail";
 import NewUser from "./pages/user/NewUser";
 import NewProduct from "./pages/product/NewProduct";
+import NotFound from './pages/404';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/users" component={Users} />
             <Route path="/user/:id" component={UserDetail} />
             <Route path="/new-user" component={NewUser} />
+            <Route path="*" component={NotFound} />
           </Switch>
         </div>
       </div>

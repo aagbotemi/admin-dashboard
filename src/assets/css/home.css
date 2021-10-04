@@ -1,11 +1,13 @@
 .home, .products, .users, .transactions,
-.user-detail, .product-detail, .new-user {
+.user-detail, .product-detail, .new-user,
+.error-page {
   min-height: calc(100vh - 64px)
 }
 
 @media only screen and (max-width: 1024px) {
   .home, .products, .users, .transactions,
-  .user-detail, .product-detail, .new-user {
+  .user-detail, .product-detail, .new-user,
+  .error-page {
     margin-left: 3.6rem;
   }
 }
