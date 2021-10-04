@@ -8,6 +8,7 @@ import BaseButton from '../../components/BaseButton'
 import AddNewItemButton from '../../components/AddNewItemButton'
 import { BaseOption, BaseSelect } from '../../components/BaseSelect'
 import BaseInput from '../../components/BaseInput'
+import { Helmet } from 'react-helmet';
 
 const ProductDetail = () => {
     const [data, setData] = useState(productDetailsData)
@@ -39,6 +40,10 @@ const ProductDetail = () => {
 
     return (
         <div className="product-detail bg-gray-100 pt-3 pb-10 sm:px-5 px-3">
+            <Helmet>
+                <title>Product Details | Admin Dashboard</title>
+                <meta name="description" content="Product Details page of Admin Dashboard" />
+            </Helmet>
             <div className="mb-3 pb-1 border-b-2 border-gray-300 flex items-center justify-between">
                 <h1 className="text-xl sm:text-2xl font-medium">Product Details</h1>
                 <Link to="/new-product">
@@ -47,8 +52,6 @@ const ProductDetail = () => {
             </div>
             <div className="grid md:grid-cols-3 grid-cols-1 md:gap-3 gap-y-3 mt-5 pb-4">
                 <Chart data={productPerformanceData} dataKey="Sales" title="Sales Performance" />
-
-
                 <div className="bg-white shadow-md rounded-xl p-5 pb-10">
                     <div className="">
                         <div className="flex items-center">
@@ -83,8 +86,6 @@ const ProductDetail = () => {
                         </div>
                     </div>
                 </div>
-            
-            
             </div>
             <div className="bg-white shadow-md rounded-xl px-6 py-8 pb-10">
                 <form onSubmit={handleSubmit}>
