@@ -3,6 +3,7 @@ import { useHistory } from 'react-router';
 import BaseButton from '../../components/BaseButton';
 import BaseInput from '../../components/BaseInput'
 import { BaseOption, BaseSelect } from '../../components/BaseSelect';
+import { Helmet } from 'react-helmet';
 
 const NewUser = () => {
     let history = useHistory();
@@ -35,9 +36,11 @@ const NewUser = () => {
 
     return (
         <div className="new-user bg-gray-100 pt-3 pb-8 sm:px-5 px-3">
+            <Helmet>
+                <title>New User | Admin Dashboard</title>
+                <meta name="description" content="Add New User page of Admin Dashboard" />
+            </Helmet>
             <h1 className="mb-4 text-xl sm:text-2xl font-medium border-b-2 border-gray-300">New User</h1>
-
-
             <form onSubmit={handleSubmit} className="flex flex-wrap bg-white p-5 pb-10 rounded-xl shadow-lg">
                 <div className="w-96 mt-3 mr-5">
                     <BaseInput 
