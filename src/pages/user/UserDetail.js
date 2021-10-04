@@ -6,7 +6,7 @@ import { FiMail } from 'react-icons/fi'
 import { GrLocation } from 'react-icons/gr'
 import { userDetailsData } from '../../dummyData'
 import { Link, useHistory } from 'react-router-dom'
-import FormInput from '../../components/FormInput';
+import FormInput from '../../components/BaseInput';
 import BaseButton from '../../components/BaseButton'
 import AddNewItemButton from '../../components/AddNewItemButton'
 

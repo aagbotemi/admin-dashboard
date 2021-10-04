@@ -8,7 +8,7 @@ import { BiUpload } from 'react-icons/bi'
 import BaseButton from '../../components/BaseButton'
 import AddNewItemButton from '../../components/AddNewItemButton'
 import { BaseOption, BaseSelect } from '../../components/BaseSelect'
-import FormInput from '../../components/FormInput'
+import BaseInput from '../../components/BaseInput'
 
 const ProductDetail = () => {
     const [data, setData] = useState(productDetailsData)
@@ -92,7 +92,7 @@ const ProductDetail = () => {
                     <div className="flex justify-between flex-col lg:flex-row sm:w-96">
                         <div className="lg:mr-2 sm:w-80">
                             <div className="mb-2">
-                                <FormInput 
+                                <BaseInput 
                                     label="Product Name" 
                                     name="productName" 
                                     value={form.productName}
@@ -137,7 +137,11 @@ const ProductDetail = () => {
                             </div>
                         </div>
                     </div>
-                    <button className="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-md mt-5 w-52">Update </button>
+                    <BaseButton
+                        type="submit"
+                        name="Update"
+                        className="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-md mt-5 w-52"
+                    />
                 </form>
             </div>
         </div>
