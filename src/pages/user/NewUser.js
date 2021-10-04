@@ -25,7 +25,6 @@ const NewUser = () => {
             [name]: value
         };
         console.log('Form changed: ', updatedForm);
-        console.log(setForm(updatedForm));
     };
 
     const handleSubmit = (event) => {
@@ -39,7 +38,7 @@ const NewUser = () => {
             <h1 className="mb-4 text-xl sm:text-2xl font-medium border-b-2 border-gray-300">New User</h1>
 
 
-            <form  onSubmit={handleSubmit} className="flex flex-wrap bg-white p-5 pb-10 rounded-xl shadow-lg">
+            <form onSubmit={handleSubmit} className="flex flex-wrap bg-white p-5 pb-10 rounded-xl shadow-lg">
                 <div className="w-96 mt-3 mr-5">
                     <BaseInput 
                         label="Username" 
