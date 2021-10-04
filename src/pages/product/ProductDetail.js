@@ -1,15 +1,42 @@
 import React, { useState } from 'react'
 import { AiOutlinePlus } from 'react-icons/ai'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { productDetailsData, productPerformanceData } from '../../dummyData'
 import Chart from "../../components/Chart"
 import { formatNumber } from '../../utils/formatNumber';
 import { BiUpload } from 'react-icons/bi'
 import BaseButton from '../../components/BaseButton'
 import AddNewItemButton from '../../components/AddNewItemButton'
+import { BaseOption, BaseSelect } from '../../components/BaseSelect'
+import FormInput from '../../components/FormInput'
 
 const ProductDetail = () => {
     const [data, setData] = useState(productDetailsData)
+
+    let history = useHistory();
+    
+    const [form, setForm] = useState({
+        productName: '',
+        inStock: '',
+        active: '',
+        file: ''
+    });
+
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        const updatedForm = {
+            ...form,
+            [name]: value
+        };
+        console.log('Form changed: ', updatedForm);
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        alert('Update Successful')
+        history.push('/users')
+    }
+
 
     return (
         <div className="product-detail bg-gray-100 pt-3 pb-10 sm:px-5 px-3">
@@ -61,27 +88,44 @@ const ProductDetail = () => {
             
             </div>
             <div className="bg-white shadow-md rounded-xl px-6 py-8 pb-10">
-                <form action="">
+                <form onSubmit={handleSubmit}>
                     <div className="flex justify-between flex-col lg:flex-row sm:w-96">
                         <div className="lg:mr-2 sm:w-80">
                             <div className="mb-2">
-                                <label className="">Product Name</label>
-                                <br />
-                                <input type="text" placeholder="Apple Airpod" className="w-full bg-gray-100 py-2 px-3 rounded-md outline-none" />
+                                <FormInput 
+                                    label="Product Name" 
+                                    name="productName" 
+                                    value={form.productName}
+                                    placeholder="Apple Airpod"
+                                    onChange={handleChange}
+                                    className="w-full bg-gray-100 py-2 px-3 rounded-md outline-none"
+                                />
                             </div>
                             <div className="flex flex-col mt-3 mr-5">
-                                <label htmlFor="active">In Stock</label>
-                                <select name="active" id="active" className="w-24 border p-2 rounded-lg">
-                                    <option value="yes">Yes</option>
-                                    <option value="no">No</option>
-                                </select>
+                                <BaseSelect
+                                    label="In Stock"
+                                    name="inStock"
+                                    value={form.inStock}
+                                    id="inStock"
+                                    className="block w-24 border p-2 rounded-lg outline-none"
+                                    onChange={handleChange}
+                                >
+                                    <BaseOption value="Yes" />
+                                    <BaseOption value="No" />
+                                </BaseSelect>
                             </div>
                             <div className="mt-3 mr-5 flex flex-col">
-                                <label htmlFor="active">Active</label>
-                                <select name="active" id="active" className="w-24 border p-2 rounded-lg">
-                                    <option value="yes">Yes</option>
-                                    <option value="no">No</option>
-                                </select>
+                                <BaseSelect
+                                    label="Active"
+                                    name="active"
+                                    value={form.active}
+                                    id="active"
+                                    className="block w-24 border p-2 rounded-lg outline-none"
+                                    onChange={handleChange}
+                                >
+                                    <BaseOption value="Yes" />
+                                    <BaseOption value="No" />
+                                </BaseSelect>
                             </div>
                         </div>
                         <div className="lg:ml-2 lg:mt-0 mt-3">

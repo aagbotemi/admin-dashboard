@@ -25,7 +25,7 @@ const UserDetail = () => {
         file: ''
     });
 
-    const handleFormChange = (event) => {
+    const handleChange = (event) => {
         // Get the name of the field that caused this change event
         // Get the new value of this field
         const { name, value } = event.target;
@@ -116,7 +116,7 @@ const UserDetail = () => {
                                         name="username" 
                                         value={form.username}
                                         placeholder="abiodun99"
-                                        onChange={handleFormChange}
+                                        onChange={handleChange}
                                         className="w-full bg-gray-100 py-2 px-3 rounded-md outline-none"
                                     />
                                 </div>
@@ -126,7 +126,7 @@ const UserDetail = () => {
                                         name="fullName" 
                                         value={form.fullName}
                                         placeholder="Abiodun Awoyemi"
-                                        onChange={handleFormChange}
+                                        onChange={handleChange}
                                         className="w-full bg-gray-100 py-2 px-3 rounded-md outline-none"
                                     />
                                 </div>
@@ -137,7 +137,7 @@ const UserDetail = () => {
                                         name="emailAddress" 
                                         value={form.emailAddress}
                                         placeholder="user@gmail.com"
-                                        onChange={handleFormChange}
+                                        onChange={handleChange}
                                         className="w-full bg-gray-100 py-2 px-3 rounded-md outline-none"
                                     />
                                 </div>
@@ -147,7 +147,7 @@ const UserDetail = () => {
                                         name="phoneNumber" 
                                         value={form.phoneNumber}
                                         placeholder="+1 123 456 67"
-                                        onChange={handleFormChange}
+                                        onChange={handleChange}
                                         className="w-full bg-gray-100 py-2 px-3 rounded-md outline-none"
                                     />
                                 </div>
@@ -157,7 +157,7 @@ const UserDetail = () => {
                                         name="address" 
                                         value={form.address}
                                         placeholder="Lagos | Nigeria"
-                                        onChange={handleFormChange}
+                                        onChange={handleChange}
                                         className="w-full bg-gray-100 py-2 px-3 rounded-md outline-none"
                                     />
                                 </div>
@@ -170,7 +170,7 @@ const UserDetail = () => {
                                         type="file"
                                         name="file" 
                                         value={form.file}
-                                        onChange={handleFormChange}
+                                        onChange={handleChange}
                                         className="hidden"
                                     /> */}
                                     <label htmlFor="file">
