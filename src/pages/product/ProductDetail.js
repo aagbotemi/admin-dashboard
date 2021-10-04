@@ -34,7 +34,7 @@ const ProductDetail = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         alert('Update Successful')
-        history.push('/users')
+        history.push('/products')
     }
 
 
