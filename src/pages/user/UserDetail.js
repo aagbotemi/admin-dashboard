@@ -9,7 +9,7 @@ import { Link, useHistory } from 'react-router-dom'
 import FormInput from '../../components/BaseInput';
 import BaseButton from '../../components/BaseButton'
 import AddNewItemButton from '../../components/AddNewItemButton'
-
+import { Helmet } from 'react-helmet';
 
 const UserDetail = () => {
     const [data, setData] = useState(userDetailsData)
@@ -48,6 +48,10 @@ const UserDetail = () => {
 
     return (
         <div className="user-detail bg-gray-100 pt-3 sm:px-5 px-3">
+            <Helmet>
+                <title>User Details | Admin Dashboard</title>
+                <meta name="description" content="User Details page of Admin Dashboard" />
+            </Helmet>
             <div className="mb-3 pb-1 border-b-2 border-gray-300 flex items-center justify-between">
                 <h1 className="text-xl sm:text-2xl font-medium">User Details</h1>
                 <Link to="/new-user">
