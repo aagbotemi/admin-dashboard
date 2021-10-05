@@ -11,9 +11,9 @@ const AvatarDropdown = ({close}) => {
                 <li onClick={close} className="px-3 hover:bg-blue-50">
                     <div className="flex items-center border-b py-2 hover:text-blue-400">
                         <span className="">
-                            <CgProfile  size="22px" />
+                            <CgProfile  size="18px" />
                         </span>
-                        <span className="ml-2 text-md font-medium">
+                        <span className="ml-2 text-sm font-medium">
                             Profile
                         </span>
                     </div>
@@ -23,9 +23,9 @@ const AvatarDropdown = ({close}) => {
                 <li onClick={close} className="px-3 hover:bg-blue-50">
                     <div className="flex items-center border-b py-2 hover:text-blue-400">
                         <span className="">
-                            <AiOutlineSetting  size="22px" />
+                            <AiOutlineSetting  size="18px" />
                         </span>
-                        <span className="ml-2 text-md font-medium">
+                        <span className="ml-2 text-sm font-medium">
                             Setting
                         </span>
                     </div>
@@ -35,9 +35,9 @@ const AvatarDropdown = ({close}) => {
                 <li onClick={close} className="px-3 hover:bg-red-50">
                     <div className="flex items-center border-b py-2">
                         <span className="">
-                            <FiLogOut  size="22px" color="red" />
+                            <FiLogOut  size="16px" color="red" />
                         </span>
-                        <span className="ml-2 text-md font-medium text-red-500 ">
+                        <span className="ml-2 text-sm font-medium text-red-500 ">
                             LogOut
                         </span>
                     </div>
