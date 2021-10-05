@@ -56,7 +56,7 @@ const Products = () => {
                 <table className="w-full divide-y divide-gray-200 relative">
                   <thead className="bg-gray-50">
                     <tr>
-                      <th scope="col" className="px-3 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      <th scope="col" className="px-3 py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                         S/N
                       </th>
                       <th scope="col" className="px-4 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
