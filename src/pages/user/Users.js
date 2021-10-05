@@ -56,13 +56,13 @@ const Users = () => {
                         <table className="w-full divide-y divide-gray-200 relative">
                         <thead className="bg-gray-50">
                             <tr>
-                                <th scope="col" className="px-3 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <th scope="col" className="px-3 py-4 text-left text-xs text-center font-medium text-gray-500 uppercase tracking-wider">
                                     S/N
                                 </th>
                                 <th scope="col" className="md:px-2 px-1 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                     ID
                                 </th>
-                                <th scope="col" className="px-4 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <th scope="col" className="px-3 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                     Name
                                 </th>
                                 <th scope="col" className="md:px-2 px-1 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -86,12 +86,12 @@ const Users = () => {
                                 return (
                                 <tr key={item.id} className="">
                                     <td className="font-medium whitespace-nowrap text-center py-3">{index + 1}</td>
-                                    <td className="font-medium whitespace-nowrap text-center  px-1 py-3">{item.id}</td>
+                                    <td className="font-medium whitespace-nowrap md:px-2 px-1 py-3">{item.id}</td>
                                     <td className="flex items-center font-medium whitespace-nowrap px-2 py-3">
                                         <img src={item.image} alt={item.name} className="w-8 h-8 mr-2 rounded-full object-center" />
                                         <span className="whitespace-nowrap truncate">{item.name}</span>
                                     </td>
-                                    <td className="text-sm truncate whitespace-nowrap md:px-3 px-1 py-3">{item.email}</td>
+                                    <td className="text-sm truncate whitespace-nowrap md:px-2 px-1 py-3">{item.email}</td>
                                     <td className="text-sm truncate whitespace-nowrap md:px-3 px-1 py-3">
                                         {item.isAdmin 
                                             ? <BiCheck size="25px" color="green" /> 
