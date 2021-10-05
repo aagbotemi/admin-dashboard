@@ -49,7 +49,7 @@ const Transactions = () => {
                             <table className="w-full divide-y divide-gray-200 relative">
                                 <thead className="bg-gray-50">
                                     <tr>
-                                        <th scope="col" className="px-1 md:px-3 py-5 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        <th scope="col" className="px-1 md:px-3 py-5 text-left text-xs font-medium text-center text-gray-500 uppercase tracking-wider">
                                             S/N
                                         </th>
                                         <th scope="col" className="px-2 md:px-4 py-5 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -81,18 +81,18 @@ const Transactions = () => {
                                     : data.map((item, index) => {
                                         return (
                                         <tr key={item.id} className="">
-                                            <td className="font-medium whitespace-nowrap text-center py-3">{index + 1}</td>
-                                            <td className="font-medium whitespace-nowrap truncate px-2 py-3">{item.name}</td>
-                                            <td className="text-sm truncate whitespace-nowrap px-2 py-3">&#36;{formatNumber(item.amount)}</td>
-                                            <td className="text-sm truncate whitespace-nowrap px-2 py-3">{item.ref}</td>
-                                            <td className="text-sm truncate whitespace-nowrap px-2 py-3">
+                                            <td className="font-medium whitespace-nowrap text-center px-1 md:px-3 py-3">{index + 1}</td>
+                                            <td className="font-medium whitespace-nowrap truncate md:px-4 px-2 py-3">{item.name}</td>
+                                            <td className="text-sm truncate whitespace-nowrap md:px-3 px-1 py-3">&#36;{formatNumber(item.amount)}</td>
+                                            <td className="text-sm truncate whitespace-nowrap md:px-3 px-1 py-3">{item.ref}</td>
+                                            <td className="text-sm truncate whitespace-nowrap md:px-3 px-1 py-3">
                                                 <StatusBadge type={item.status}></StatusBadge>
                                             </td>
-                                            <td className="truncate whitespace-nowrap px-2 py-3 text-xs">
+                                            <td className="truncate whitespace-nowrap md:px-3 px-1 py-3 text-xs">
                                             <div>{item.date}</div>
                                             <div>[{item.time}]</div>
                                             </td>
-                                            <td className="text-xs truncate whitespace-nowrap px-2 py-3">
+                                            <td className="text-xs truncate whitespace-nowrap md:px-3 px-1 py-3">
                                             <div className="flex items-center">
                                                 <Link to="/transactions">
                                                 <BiMessageSquareDetail color="green" size="20px" className="cursor-pointer" />
