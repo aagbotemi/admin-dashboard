@@ -23,7 +23,7 @@ const FeaturedInfo = ({data}) => {
                                         {item.increase ? <AiOutlineArrowUp color="green" /> : <AiOutlineArrowDown color="red"/>}
                                     </span>
                                     <span className={`${item.increase ? "text-green-600" : "text-red-600"} font-medium mx-2 text-lg`}>{item.percentage}%</span>
-                                    <span className="text-sm">{item.timeline}</span>
+                                    <span className="text-sm hidden sm:block">{item.timeline}</span>
                                 </div>
                             </div>
                             <div className={`${item.iconBgClr} text-sm rounded-full my-auto p-1`}>
