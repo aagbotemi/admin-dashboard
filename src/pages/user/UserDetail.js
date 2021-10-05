@@ -55,7 +55,7 @@ const UserDetail = () => {
             <div className="mb-3 pb-1 border-b-2 border-gray-300 flex items-center justify-between">
                 <h1 className="text-xl sm:text-2xl font-medium">User Details</h1>
                 <Link to="/new-user">
-                    <AddNewItemButton />
+                    <AddNewItemButton title="Add User" />
                 </Link>
             </div>
 

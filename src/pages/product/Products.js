@@ -35,7 +35,7 @@ const Products = () => {
         <div className="mb-3 pb-1 border-b-2 border-gray-300 flex items-center justify-between">
           <h1 className="text-xl sm:text-2xl font-medium">Products</h1>
           <Link to="/new-product">
-            <AddNewItemButton />
+            <AddNewItemButton title="Add Product" />
           </Link>
         </div>
         

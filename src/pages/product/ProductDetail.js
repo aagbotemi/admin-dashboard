@@ -47,7 +47,7 @@ const ProductDetail = () => {
             <div className="mb-3 pb-1 border-b-2 border-gray-300 flex items-center justify-between">
                 <h1 className="text-xl sm:text-2xl font-medium">Product Details</h1>
                 <Link to="/new-product">
-                    <AddNewItemButton />
+                    <AddNewItemButton title="Add Product" />
                 </Link>
             </div>
             <div className="grid md:grid-cols-3 grid-cols-1 md:gap-3 gap-y-3 mt-5 pb-4">
