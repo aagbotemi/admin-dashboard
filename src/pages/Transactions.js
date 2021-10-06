@@ -104,42 +104,30 @@ const Transactions = () => {
                                     {Array.isArray(data) && data.length === 0 
                                     ? <tr>
                                         <td colSpan="7" className="text-center py-4 text-gray-600">No transaction found</td>
-                                        </tr> 
+                                    </tr> 
                                     : data.map((item, index) => {
                                         return (
-                                        <tr key={item.id} className="">
-                                            <td className="font-medium whitespace-nowrap text-center px-1 md:px-3 py-3">{index + 1}</td>
-                                            <td className="font-medium whitespace-nowrap truncate md:px-4 px-2 py-3">{item.name}</td>
-                                            <td className="text-sm truncate whitespace-nowrap md:px-3 px-1 py-3">&#36;{formatNumber(item.amount)}</td>
-                                            <td className="text-sm truncate whitespace-nowrap md:px-3 px-1 py-3">{item.ref}</td>
-                                            <td className="text-sm truncate whitespace-nowrap md:px-3 px-1 py-3">
-                                                <StatusBadge type={item.status}></StatusBadge>
-                                            </td>
-                                            <td className="truncate whitespace-nowrap md:px-3 px-1 py-3 text-xs">
-                                            <div>{item.date}</div>
-                                            <div>[{item.time}]</div>
-                                            </td>
-                                            <td className="text-xs truncate whitespace-nowrap md:px-3 px-1 py-3">
-                                            <div className="flex items-center">
-                                                <Link to="/transactions">
-                                                <BiMessageSquareDetail color="green" size="20px" className="cursor-pointer" />
-                                                </Link>
-                                                <FaRegTrashAlt onClick={() => openModal(item.id)} color="red" size="20px" className="ml-2 cursor-pointer" />
-                                                
-{/* 
-                                                {modal && (
-                                                    <Modal 
-                                                        open={modal}
-                                                        message="Are you sure you want to delete this item?"
-                                                        cancel={() => setModal(false)}
-                                                        cancelText="No"
-                                                        confirm={() => handleDelete(item.id)}
-                                                        confirmText="Yes"
-                                                    />
-                                                )} */}
-                                            </div>
-                                            </td> 
-                                        </tr>
+                                            <tr key={item.id} className="">
+                                                <td className="font-medium whitespace-nowrap text-center px-1 md:px-3 py-3">{index + 1}</td>
+                                                <td className="font-medium whitespace-nowrap truncate md:px-4 px-2 py-3">{item.name}</td>
+                                                <td className="text-sm truncate whitespace-nowrap md:px-3 px-1 py-3">&#36;{formatNumber(item.amount)}</td>
+                                                <td className="text-sm truncate whitespace-nowrap md:px-3 px-1 py-3">{item.ref}</td>
+                                                <td className="text-sm truncate whitespace-nowrap md:px-3 px-1 py-3">
+                                                    <StatusBadge type={item.status}></StatusBadge>
+                                                </td>
+                                                <td className="truncate whitespace-nowrap md:px-3 px-1 py-3 text-xs">
+                                                    <div>{item.date}</div>
+                                                    <div>[{item.time}]</div>
+                                                </td>
+                                                <td className="text-xs truncate whitespace-nowrap md:px-3 px-1 py-3">
+                                                    <div className="flex items-center">
+                                                        <Link to="/transactions">
+                                                        <BiMessageSquareDetail color="green" size="20px" className="cursor-pointer" />
+                                                        </Link>
+                                                        <FaRegTrashAlt onClick={() => openModal(item.id)} color="red" size="20px" className="ml-2 cursor-pointer" />
+                                                    </div>
+                                                </td> 
+                                            </tr>
                                         )
                                     })}
                                 </tbody> 

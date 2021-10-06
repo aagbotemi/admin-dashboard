@@ -7,13 +7,41 @@ import { BiCheck, BiSearch } from 'react-icons/bi'
 import { AiOutlineClose } from 'react-icons/ai'
 import AddNewItemButton from '../../components/AddNewItemButton'
 import { Helmet } from 'react-helmet';
+import Modal from '../../components/Modal'
 
 const Users = () => {
     const [data, setData] = useState([])
     const [search, setSearch] = useState("")
-    
-    const handleDelete = (id) => {
-        setData(data.filter((item) => item.id !== id))
+    const [modal, setModal] = useState({
+        show: false,
+        id: null,
+    })
+
+    const openModal = (id) => {
+        setModal({
+            show: true,
+            id,
+        });
+    }
+
+    const closeModal = () => {
+        setModal({
+            show: false,
+            id: null
+        });
+    }
+
+    const handleDelete = () => {
+        if (modal.show && modal.id) {
+            console.log(modal.id);
+            console.log(modal.show);
+            let filteredData = data.filter((item) => item.id !== modal.id);
+            setData(filteredData);
+            setModal({
+                show: false,
+                id: null,
+            });
+        }
     }
 
     useEffect(() => {
@@ -52,68 +80,78 @@ const Users = () => {
             <div className="flex flex-col">
                 <div className="mb-3 overflow-x-auto rounded-xl shadow-md">
                     <div className="pt-2 align-middle inline-block min-w-full">
-                    <div className="overflow-hidden border-gray-200 rounded-xl">
-                        <table className="w-full divide-y divide-gray-200 relative">
-                        <thead className="bg-gray-50">
-                            <tr>
-                                <th scope="col" className="px-3 py-4 text-left text-xs text-center font-medium text-gray-500 uppercase tracking-wider">
-                                    S/N
-                                </th>
-                                <th scope="col" className="md:px-2 px-1 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    ID
-                                </th>
-                                <th scope="col" className="px-3 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Name
-                                </th>
-                                <th scope="col" className="md:px-2 px-1 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    email
-                                </th>
-                                <th scope="col" className=" md:px-3 px-1 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    admin
-                                </th>
-                                <th scope="col" className="md:px-3 px-1 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    action
-                                </th>
-                            </tr>
-                        </thead>
+                        <div className="overflow-hidden border-gray-200 rounded-xl">
+                            <table className="w-full divide-y divide-gray-200 relative">
+                                <thead className="bg-gray-50">
+                                    <tr>
+                                        <th scope="col" className="px-3 py-4 text-left text-xs text-center font-medium text-gray-500 uppercase tracking-wider">
+                                            S/N
+                                        </th>
+                                        <th scope="col" className="md:px-2 px-1 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            ID
+                                        </th>
+                                        <th scope="col" className="px-3 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Name
+                                        </th>
+                                        <th scope="col" className="md:px-2 px-1 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            email
+                                        </th>
+                                        <th scope="col" className=" md:px-3 px-1 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            admin
+                                        </th>
+                                        <th scope="col" className="md:px-3 px-1 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            action
+                                        </th>
+                                    </tr>
+                                </thead>
 
-                        <tbody className="bg-white divide-y divide-gray-300">
-                            {Array.isArray(data) && data.length === 0 
-                            ? <tr>
-                                <td colSpan="6" className="text-center py-4">No user found</td>
-                                </tr> 
-                            : data.map((item, index) => {
-                                return (
-                                <tr key={item.id} className="">
-                                    <td className="font-medium whitespace-nowrap text-center py-3">{index + 1}</td>
-                                    <td className="font-medium whitespace-nowrap md:px-2 px-1 py-3">{item.id}</td>
-                                    <td className="flex items-center font-medium whitespace-nowrap px-2 py-3">
-                                        <img src={item.image} alt={item.name} className="w-8 h-8 mr-2 rounded-full object-center" />
-                                        <span className="whitespace-nowrap truncate">{item.name}</span>
-                                    </td>
-                                    <td className="text-sm truncate whitespace-nowrap md:px-2 px-1 py-3">{item.email}</td>
-                                    <td className="text-sm truncate whitespace-nowrap md:px-3 px-1 py-3">
-                                        {item.isAdmin 
-                                            ? <BiCheck size="25px" color="green" /> 
-                                            : <AiOutlineClose size="20px" color="red" />}
-                                    </td>
-                                    <td className="text-xs truncate whitespace-nowrap md:px-3 px-1 py-3">
-                                        <div className="flex items-center">
-                                            <Link to={`/user/${item.id}`}>
-                                                <HiPencilAlt color="green" size="20px" className="cursor-pointer" />
-                                            </Link>
-                                            <FaRegTrashAlt onClick={() => handleDelete(item.id)} color="red" size="20px" className="ml-2 cursor-pointer" />
-                                        </div>
-                                    </td> 
-                                </tr>
-                                )
-                            })}
-                        </tbody> 
-                        </table>
+                                <tbody className="bg-white divide-y divide-gray-300">
+                                    {Array.isArray(data) && data.length === 0 
+                                    ? <tr>
+                                        <td colSpan="6" className="text-center py-4">No user found</td>
+                                    </tr> 
+                                    : data.map((item, index) => {
+                                        return (
+                                            <tr key={item.id} className="">
+                                                <td className="font-medium whitespace-nowrap text-center py-3">{index + 1}</td>
+                                                <td className="font-medium whitespace-nowrap md:px-2 px-1 py-3">{item.id}</td>
+                                                <td className="flex items-center font-medium whitespace-nowrap px-2 py-3">
+                                                    <img src={item.image} alt={item.name} className="w-8 h-8 mr-2 rounded-full object-center" />
+                                                    <span className="whitespace-nowrap truncate">{item.name}</span>
+                                                </td>
+                                                <td className="text-sm truncate whitespace-nowrap md:px-2 px-1 py-3">{item.email}</td>
+                                                <td className="text-sm truncate whitespace-nowrap md:px-3 px-1 py-3">
+                                                    {item.isAdmin 
+                                                        ? <BiCheck size="25px" color="green" /> 
+                                                        : <AiOutlineClose size="20px" color="red" />}
+                                                </td>
+                                                <td className="text-xs truncate whitespace-nowrap md:px-3 px-1 py-3">
+                                                    <div className="flex items-center">
+                                                        <Link to={`/user/${item.id}`}>
+                                                            <HiPencilAlt color="green" size="20px" className="cursor-pointer" />
+                                                        </Link>
+                                                        <FaRegTrashAlt onClick={() => openModal(item.id)} color="red" size="20px" className="ml-2 cursor-pointer" />
+                                                    </div>
+                                                </td> 
+                                            </tr>
+                                        )
+                                    })}
+                                </tbody> 
+                            </table>
+                        </div>
                     </div>
                 </div>
-                </div>
             </div>
+            {modal.show && (
+                <Modal 
+                    open={modal.show}
+                    message="Are you sure you want to delete this item?"
+                    cancel={closeModal}
+                    cancelText="No"
+                    confirm={handleDelete}
+                    confirmText="Yes"
+                />
+            )}
         </div>
     )
 }
