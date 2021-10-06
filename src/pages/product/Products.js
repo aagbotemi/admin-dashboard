@@ -18,7 +18,7 @@ const Products = () => {
 
   useEffect(() => {
     setData(productData.filter(product => {
-      return Object.values(product).some(name => String(name).includes(search))
+      return Object.values(product).some(name => String(name).toLowerCase().includes(search.toLowerCase()))
     }))
   }, [search])
 
