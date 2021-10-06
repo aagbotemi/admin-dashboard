@@ -7,13 +7,42 @@ import { HiPencilAlt } from 'react-icons/hi'
 import { BiSearch } from 'react-icons/bi'
 import AddNewItemButton from '../../components/AddNewItemButton'
 import { Helmet } from 'react-helmet';
+import Modal from '../../components/Modal'
 
 const Products = () => {
   const [data, setData] = useState([])
   const [search, setSearch] = useState("")
   
-  const handleDelete = (id) => {
-    setData(data.filter((item) => item.id !== id))
+  const [modal, setModal] = useState({
+    show: false,
+    id: null,
+  })
+
+  const openModal = (id) => {
+    setModal({
+      show: true,
+      id,
+    });
+  }
+
+  const closeModal = () => {
+    setModal({
+      show: false,
+      id: null
+    });
+  }
+
+  const handleDelete = () => {
+    if (modal.show && modal.id) {
+      console.log(modal.id);
+      console.log(modal.show);
+      let filteredData = data.filter((item) => item.id !== modal.id);
+      setData(filteredData);
+      setModal({
+          show: false,
+          id: null,
+      });
+    }
   }
 
   useEffect(() => {
@@ -100,7 +129,7 @@ const Products = () => {
                                 <Link to={`/product/${item.id}`}>
                                   <HiPencilAlt color="green" size="20px" className="cursor-pointer" />
                                 </Link>
-                                <FaRegTrashAlt onClick={() => handleDelete(item.id)} color="red" size="20px" className="ml-1 cursor-pointer" />
+                                <FaRegTrashAlt onClick={() => openModal(item.id)} color="red" size="20px" className="ml-1 cursor-pointer" />
                               </div>
                             </td> 
                           </tr>
@@ -112,6 +141,16 @@ const Products = () => {
           </div>
         </div>
       </div>
+      {modal.show && (
+        <Modal 
+            open={modal.show}
+            message="Are you sure you want to delete this item?"
+            cancel={closeModal}
+            cancelText="No"
+            confirm={handleDelete}
+            confirmText="Yes"
+        />
+      )}
     </div>
   )
 }

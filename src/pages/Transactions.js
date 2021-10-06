@@ -122,7 +122,7 @@ const Transactions = () => {
                                                 <td className="text-xs truncate whitespace-nowrap md:px-3 px-1 py-3">
                                                     <div className="flex items-center">
                                                         <Link to="/transactions">
-                                                        <BiMessageSquareDetail color="green" size="20px" className="cursor-pointer" />
+                                                            <BiMessageSquareDetail color="green" size="20px" className="cursor-pointer" />
                                                         </Link>
                                                         <FaRegTrashAlt onClick={() => openModal(item.id)} color="red" size="20px" className="ml-2 cursor-pointer" />
                                                     </div>
