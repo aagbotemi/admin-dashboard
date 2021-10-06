@@ -19,21 +19,12 @@ body {
 }
 .display {
   flex: 4;
-} 
+}
 @media (min-width: 1024px) { 
   .sidebar-wrap {
     flex: 1;
   }
 }
-
 .modal {
-  top: 30%;
-  left: 50%;
-  max-width: 20rem;
-}
-
-@media only screen and (max-width: 600px) {
-  .modal {
-    left: 20%;
-  }
+  transform: translate(-50%, 0%);
 }

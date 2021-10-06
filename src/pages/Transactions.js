@@ -6,13 +6,40 @@ import {FaRegTrashAlt} from 'react-icons/fa'
 import {BiMessageSquareDetail, BiSearch} from 'react-icons/bi'
 import StatusBadge from '../components/StatusBadge'
 import { Helmet } from 'react-helmet';
+import Modal from '../components/Modal'
 
 const Transactions = () => {
     const [data, setData] = useState([])
+    const [modal, setModal] = useState({
+        show: false, // initial values set to false and null
+        id: null,
+    })
     const [search, setSearch] = useState("")
 
-    const handleDelete = (id) => {
-        setData(data.filter((item) => item.id !== id))
+    const openModal = (id) => {
+        setModal({
+            show: true,
+            id,
+        });
+    }
+    const closeModal = () => {
+        setModal({
+            show: false,
+            id: null
+        });
+    }
+
+    const handleDelete = () => {
+        if (modal.show && modal.id) {
+            console.log(modal.id);
+            console.log(modal.show);
+            let filteredData = data.filter((item) => item.id !== modal.id);
+            setData(filteredData);
+            setModal({
+                show: false,
+                id: null,
+            });
+        }
     }
 
     useEffect(() => {
@@ -97,7 +124,19 @@ const Transactions = () => {
                                                 <Link to="/transactions">
                                                 <BiMessageSquareDetail color="green" size="20px" className="cursor-pointer" />
                                                 </Link>
-                                                <FaRegTrashAlt onClick={() => handleDelete(item.id)} color="red" size="20px" className="ml-2 cursor-pointer" />
+                                                <FaRegTrashAlt onClick={() => openModal(item.id)} color="red" size="20px" className="ml-2 cursor-pointer" />
+                                                
+{/* 
+                                                {modal && (
+                                                    <Modal 
+                                                        open={modal}
+                                                        message="Are you sure you want to delete this item?"
+                                                        cancel={() => setModal(false)}
+                                                        cancelText="No"
+                                                        confirm={() => handleDelete(item.id)}
+                                                        confirmText="Yes"
+                                                    />
+                                                )} */}
                                             </div>
                                             </td> 
                                         </tr>
@@ -109,6 +148,16 @@ const Transactions = () => {
                     </div>
                 </div>
             </div>
+            {modal.show && (
+                <Modal 
+                    open={modal.show}
+                    message="Are you sure you want to delete this item?"
+                    cancel={closeModal}
+                    cancelText="No"
+                    confirm={handleDelete}
+                    confirmText="Yes"
+                />
+            )}
         </div>
     )
 }
