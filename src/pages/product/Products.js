@@ -39,8 +39,8 @@ const Products = () => {
       let filteredData = data.filter((item) => item.id !== modal.id);
       setData(filteredData);
       setModal({
-          show: false,
-          id: null,
+        show: false,
+        id: null,
       });
     }
   }
