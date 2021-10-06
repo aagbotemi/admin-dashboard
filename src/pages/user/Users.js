@@ -18,7 +18,7 @@ const Users = () => {
 
     useEffect(() => {
         setData(usersData.filter(user => {
-            return Object.values(user).some(name => String(name).includes(search))
+            return Object.values(user).some(name => String(name).toLowerCase().includes(search.toLowerCase()))
         }))
     }, [search])
 
