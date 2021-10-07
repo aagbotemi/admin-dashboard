@@ -22,7 +22,6 @@ const NewProduct = () => {
             ...form,
             [name]: value
         };
-        console.log('Form changed: ', updatedForm);
     };
 
     const handleSubmit = (event) => {

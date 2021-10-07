@@ -26,18 +26,11 @@ const UserDetail = () => {
     });
 
     const handleChange = (event) => {
-        // Get the name of the field that caused this change event
-        // Get the new value of this field
         const { name, value } = event.target;
-        // Assign new value to the appropriate form field
         const updatedForm = {
             ...form,
             [name]: value
         };
-        console.log('Form changed: ', updatedForm);
-        // alert('Form changed: ', JSON.parse(updatedForm));
-        // Update state
-        console.log(setForm(updatedForm));
     };
 
     const handleSubmit = (event) => {
@@ -45,7 +38,7 @@ const UserDetail = () => {
         alert('Update Successful')
         history.push('/users')
     }
-
+    
     return (
         <div className="user-detail bg-gray-100 pt-3 sm:px-5 px-3">
             <Helmet>

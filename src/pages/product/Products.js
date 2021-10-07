@@ -34,8 +34,6 @@ const Products = () => {
 
   const handleDelete = () => {
     if (modal.show && modal.id) {
-      console.log(modal.id);
-      console.log(modal.show);
       let filteredData = data.filter((item) => item.id !== modal.id);
       setData(filteredData);
       setModal({
