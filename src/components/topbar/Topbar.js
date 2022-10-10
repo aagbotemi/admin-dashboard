@@ -66,7 +66,7 @@ const Topbar = () => {
                     <img
                         src={Avatar}
                         alt="user avatar"
-                        className="w-9 h-9 ml-2 sm:ml-3 rounded-full cursor-pointer"
+                        className="w-9 h-9 ml-2 sm:ml-4 rounded-full cursor-pointer"
                         onClick={handleAvatarDropdown}
                     />
                     {showAvatarDropdown && <AvatarDropdown close={() => setShowAvatarDropdown(false)} />}
